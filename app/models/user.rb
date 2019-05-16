@@ -5,4 +5,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :hostels # add an if condition for user_type
   has_many :bookings
+
 end
