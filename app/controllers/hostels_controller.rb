@@ -36,7 +36,7 @@ class HostelsController < ApplicationController
 
   private
 
-  def cocktail_params
-    params.require(:hostel).permit(:)
+  def hostel_params
+    params.require(:hostel).permit( :name, :address, :city_name )
   end
 end
