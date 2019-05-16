@@ -13,18 +13,25 @@ class BookingsController < ApplicationController
   end
 
   def show
-    @bookings
+    @bookings = Booking.find(params[:id])
   end
 
   def edit
     @bookings = Booking.find(params[:id])
+    @bookings.save
   end
 
   def update
-
+    if @booking = Booking.update(booking_params)
+      redirect_to @booking, notice: "Booking successfully updated"
+    else
+      render :edit
+    end
   end
 
   def destroy
+    @booking = Booking.find(params[:id])
+    @booking.destroy
   end
 
   private
