@@ -1,39 +1,48 @@
 class BookingsController < ApplicationController
   def index
-    @bookings = Booking.all
+    @bookings = policy_scope(Booking)
   end
 
   def new
-    @bookings = Booking.new
-    @bookings.user = current_user
+    @booking = Booking.new
+    authorize @booking
   end
 
   def create
+    authorize @booking
     @booking = Booking.new(booking_params)
     @booking.user = current_user
-    @booking.save
+    if @booking.save
+      redirect_to booking_path(@booking)
+    else
+      render :new
   end
 
   def show
-    @bookings = Booking.find(params[:id])
+    @booking = Booking.find(params[:id])
+    authorize @booking
   end
 
   def edit
-    @bookings = Booking.find(params[:id])
-    @bookings.save
+    @booking = Booking.find(params[:id])
+    @booking.user = current_user
+    @booking.save
+
+    redirect_to bookings_path
   end
 
   def update
-    if @booking = Booking.update(booking_params)
-      redirect_to @booking, notice: "Booking successfully updated"
+    authorize @booking
+    if @booking.update(booking_params)
+      redirect_to booking_path(@booking), notice: "Booking successfully updated"
     else
       render :edit
     end
   end
 
   def destroy
-    @booking = Booking.find(params[:id])
-    @booking.user = current_user
+    authorize @booking
+    if @booking = Booking.find(params[:id])
     @booking.destroy
   end
 
