@@ -32,7 +32,7 @@ class HostelsController < ApplicationController
   def update
     authorize @hostel
     if @hostel = Hostel.update(hostels_params)
-      redirect_to @hostels, notice: 'Hostel was succesfully updated'
+      redirect_to hostels_path, notice: 'Hostel was succesfully updated'
     else
       render :edit
     end
@@ -40,6 +40,7 @@ class HostelsController < ApplicationController
 
   def destroy
     authorize @hostel
+    @hostel = Hostel.find(params[:id])
     if @hostel = Hostel.destroy
       redirect_to @hostels, notice: 'Hostel was succesfully removed'
     else

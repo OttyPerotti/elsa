@@ -5,27 +5,56 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-user = User.new
-user.email = 'test@example.com'
-user.password = '123456'
-user.user_type = 'guest'
-user.first_name = 'Don'
-user.last_name = 'Murphy'
-user.nationality = 'British'
-user.age = '99'
+Booking.all.each do |booking|
+  booking.destroy
+end
+
+Hostel.all.each do |hostel|
+  hostel.destroy
+end
+
+User.all.each do |user|
+  user.destroy
+end
+
+user = User.create!(
+  email: 'test@example.com',
+  password: '123456',
+  user_type: 'guest',
+  first_name: 'Don',
+  last_name: 'Murphy',
+  nationality: 'British',
+  age: '99'
+)
 
 user.save!
 
-user = User.new
-user.email = 'test2@example.com'
-user.password = '123456'
-user.user_type = 'owner'
-user.first_name = 'Miriam'
-user.last_name = 'Kennedy'
-user.nationality = 'German'
-user.age = '20'
+user1 = User.create!(
+  email: 'test2@example.com',
+  password: '123456',
+  user_type: 'owner',
+  first_name: 'Miriam',
+  last_name: 'Kennedy',
+  nationality: 'German',
+  age: '20',
+)
+user1.save!
 
-user.save
+hostel = Hostel.create!(
+  name: "Under The Dragon's Balls - Hostel",
+  address: 'Dragon Lane',
+  city_name: 'Le Wagonia',
+  user_id: 2,
+)
+hostel.save!
+
+booking = Booking.create!(
+  nights: 2,
+  user_id: 1,
+  hostel_id: 1,
+)
+booking.save!
+
 
 
 
