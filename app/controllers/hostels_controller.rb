@@ -1,28 +1,36 @@
 class HostelsController < ApplicationController
+  skip_before_action :authenticate_user!, only: :index
+
   def index
-    @hostels = Hostel.all
+    @hostels = policy_scope(Hostel)
   end
 
   def new
+    authorize @hostel
     @hostel = Hostel.new
   end
 
   def create
+    @hostel.user = current_user
     @hostel = Hostel.new(hostels_params)
+    authorize @hostel
     @hostel = Hostel.save
 
     redirect_to hostel_path(@hostel)
   end
 
   def show
+    authorize @hostel
     @hostel = Hostel.find(params[:id])
   end
 
   def edit
+    authorize @hostel
     @hostel = Hostel.find(params[:id])
   end
 
   def update
+    authorize @hostel
     if @hostel = Hostel.update(hostels_params)
       redirect_to @hostels, notice: 'Hostel was succesfully updated'
     else
@@ -30,9 +38,12 @@ class HostelsController < ApplicationController
     end
   end
 
-  def delete
+  def destroy
+    authorize @hostel
     if @hostel = Hostel.destroy
-      redirect_to_to @hostels, notice: 'Hostel was succesfully removed'
+      redirect_to @hostels, notice: 'Hostel was succesfully removed'
+    else
+      render :index
     end
   end
 

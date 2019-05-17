@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_16_153019) do
+ActiveRecord::Schema.define(version: 2019_05_17_131833) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,11 +19,9 @@ ActiveRecord::Schema.define(version: 2019_05_16_153019) do
     t.integer "nights"
     t.bigint "user_id"
     t.bigint "hostel_id"
-    t.bigint "room_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["hostel_id"], name: "index_bookings_on_hostel_id"
-    t.index ["room_id"], name: "index_bookings_on_room_id"
     t.index ["user_id"], name: "index_bookings_on_user_id"
   end
 
@@ -56,12 +54,16 @@ ActiveRecord::Schema.define(version: 2019_05_16_153019) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "user_type"
+    t.string "first_name"
+    t.string "last_name"
+    t.string "nationality"
+    t.integer "age"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
   add_foreign_key "bookings", "hostels"
-  add_foreign_key "bookings", "rooms"
   add_foreign_key "bookings", "users"
   add_foreign_key "hostels", "users"
   add_foreign_key "rooms", "hostels"
