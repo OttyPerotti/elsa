@@ -16,6 +16,7 @@ class BookingsController < ApplicationController
       redirect_to booking_path(@booking)
     else
       render :new
+    end
   end
 
   def show
@@ -42,8 +43,12 @@ class BookingsController < ApplicationController
 
   def destroy
     authorize @booking
-    if @booking = Booking.find(params[:id])
-    @booking.destroy
+    @booking = Booking.find(params[:id])
+    if @booking.destroy
+      redirect_to bookings_path, notice: 'Hostel was succesfully removed'
+    else
+      render :index
+    end
   end
 
   private

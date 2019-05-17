@@ -20,8 +20,8 @@ class HostelsController < ApplicationController
   end
 
   def show
-    authorize @hostel
     @hostel = Hostel.find(params[:id])
+    authorize @hostel
   end
 
   def edit
@@ -39,9 +39,9 @@ class HostelsController < ApplicationController
   end
 
   def destroy
-    authorize @hostel
     @hostel = Hostel.find(params[:id])
-    if @hostel = Hostel.destroy
+    authorize @hostel
+    if @Hostel.destroy!
       redirect_to @hostels, notice: 'Hostel was succesfully removed'
     else
       render :index
@@ -51,6 +51,6 @@ class HostelsController < ApplicationController
   private
 
   def hostel_params
-    params.require(:hostel).permit( :name, :address, :city_name )
+    params.require(:hostel).permit(:name, :address, :city_name)
   end
 end
