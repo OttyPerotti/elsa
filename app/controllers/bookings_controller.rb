@@ -5,10 +5,12 @@ class BookingsController < ApplicationController
 
   def new
     @bookings = Booking.new
+    @bookings.user = current_user
   end
 
   def create
     @booking = Booking.new(booking_params)
+    @booking.user = current_user
     @booking.save
   end
 
@@ -31,6 +33,7 @@ class BookingsController < ApplicationController
 
   def destroy
     @booking = Booking.find(params[:id])
+    @booking.user = current_user
     @booking.destroy
   end
 
