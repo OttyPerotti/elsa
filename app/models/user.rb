@@ -8,6 +8,12 @@ class User < ApplicationRecord
   has_many :hostels # add an if condition for user_type
   has_many :bookings
 
+
+
+   def last_week_bookings
+    self.hostels.map{|hostel| hostel.bookings.where({ created_at:(Time.now.midnight - 7.day)..Time.now.midnight}).count}.sum
+   end
+
   # validates :user_type, presence: true
   # validates :first_name, presence: true
   # validates :last_name, presence: true
