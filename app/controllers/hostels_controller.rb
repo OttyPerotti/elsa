@@ -27,11 +27,15 @@ class HostelsController < ApplicationController
       redirect_to @hostels, notice: 'Hostel was succesfully updated'
     else
       render :edit
+    end
   end
 
   def delete
     if @hostel = Hostel.destroy
       redirect_to_to @hostels, notice: 'Hostel was succesfully removed'
+    else
+      render :index
+    end
   end
 
   private
