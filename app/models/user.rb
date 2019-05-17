@@ -3,8 +3,11 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+  USER_TYPES = ["owner", "guest"]
+  NATIONALITIES = ["American", "British", "Italian", "Polish"]
   has_many :hostels # add an if condition for user_type
   has_many :bookings
+
   # validates :user_type, presence: true
   # validates :first_name, presence: true
   # validates :last_name, presence: true

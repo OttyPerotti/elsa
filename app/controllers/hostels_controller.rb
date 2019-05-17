@@ -33,6 +33,8 @@ class HostelsController < ApplicationController
   def delete
     if @hostel = Hostel.destroy
       redirect_to_to @hostels, notice: 'Hostel was succesfully removed'
+    else
+      render :index
     end
   end
 
