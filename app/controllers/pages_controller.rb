@@ -1,14 +1,15 @@
 class PagesController < ApplicationController
-<<<<<<< HEAD
-=======
   skip_before_action :authenticate_user!, only: :home
->>>>>>> 64fc60e9068844cc35a38ae6c4464f89537b4b25
+
 
   def home
+    # @hostel = Hostel.new
+    # @hostels = Hostel.all
   end
 
 # Royden's name
   def show_partner_dashboard
+
   end
 
 # Royden's name
