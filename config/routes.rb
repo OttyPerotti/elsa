@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
+
+
+  resources :bookings
+  resources :hostels
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   # adding routes for the b2b dashboard below:
   get 'show_partner_dashboard/:id', to: 'pages#show_partner_dashboard'
