@@ -7,21 +7,9 @@ class PagesController < ApplicationController
     # @hostels = Hostel.all
   end
 
-# # Royden's name
-#   def show_partner_dashboard
+  private
 
-#   end
-
-# # Royden's name
-#   def edit_payment_method
-#   end
-
-# # John's job
-#   def update_payment_method
-#   end
-
-# # John's job
-#   def show_partner_invoices
-#   end
-
+  def payment_method_params
+    params.require(:payment_method).permit()
+  end
 end
