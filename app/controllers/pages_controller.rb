@@ -1,8 +1,6 @@
 class PagesController < ApplicationController
-<<<<<<< HEAD
-=======
   skip_before_action :authenticate_user!, only: :home
->>>>>>> 64fc60e9068844cc35a38ae6c4464f89537b4b25
+
 
   def home
   end
@@ -17,10 +15,20 @@ class PagesController < ApplicationController
 
 # John's job
   def update_payment_method
+    @payment_method = Payment_method.find(params[:id])
+    @payment_method.update(payment_method_params)
+
+
   end
 
 # John's job
-  def show_partner_invoices
-  end
+  # def show_partner_invoice
+  #   @partner_invoice = Partner_invoice.find(params[:id])
+  # end
 
+  private
+
+  def payment_method_params
+    params.require(:payment_method).permit()
+  end
 end
