@@ -7,21 +7,21 @@ class PagesController < ApplicationController
     # @hostels = Hostel.all
   end
 
-# Royden's name
-  def show_partner_dashboard
+# # Royden's name
+#   def show_partner_dashboard
 
-  end
+#   end
 
-# Royden's name
-  def edit_payment_method
-  end
+# # Royden's name
+#   def edit_payment_method
+#   end
 
-# John's job
-  def update_payment_method
-  end
+# # John's job
+#   def update_payment_method
+#   end
 
-# John's job
-  def show_partner_invoices
-  end
+# # John's job
+#   def show_partner_invoices
+#   end
 
 end
