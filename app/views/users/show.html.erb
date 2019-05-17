@@ -1,0 +1,10 @@
+<%= @user.email %>
+
+<% if current_user.hostel_owner == true %>
+  <div>
+    <%= current_user.hostels.each do %>
+    <% end %>
+  </div>
+<% else %>
+
+<% end %>
