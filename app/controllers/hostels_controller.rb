@@ -41,8 +41,8 @@ class HostelsController < ApplicationController
   def destroy
     @hostel = Hostel.find(params[:id])
     authorize @hostel
-    if @Hostel.destroy!
-      redirect_to @hostels, notice: 'Hostel was succesfully removed'
+    if @hostel.destroy!
+      redirect_to hostels_path, notice: 'Hostel was succesfully removed'
     else
       render :index
     end
