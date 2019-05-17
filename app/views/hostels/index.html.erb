@@ -3,3 +3,5 @@
 <% @hostels.each do |hostel| %>
   <h3><%= hostel.name %> <%= link_to "Delete this", hostel_path(hostel), method: :delete  %></h3>
 <% end %>
+
+<% link_to "add new hostel", new_hostel_path %>

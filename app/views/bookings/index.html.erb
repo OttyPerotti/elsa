@@ -2,7 +2,6 @@
 <p>Find me in app/views/bookings/Property.html.erb</p>
 
 <% @bookings.each do |booking| %>
-<% hostel_name = booking.hostel_id %>
-<% hostel_name.name %>
-  <h3><%= booking.hostel_id.name%><%= booking.nights %> <%= link_to "Delete this", method: :delete  %></h3>
+  <h3><%= booking.hostel.name %><%= booking.nights %></h3>
+  <%= link_to "Delete this", method: :delete  %>
 <% end %>

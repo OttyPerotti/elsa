@@ -2,7 +2,7 @@ class HostelsController < ApplicationController
   skip_before_action :authenticate_user!, only: :index
 
   def index
-    @hostels = policy_scope(Hostel)
+    @hostels = policy_scope(Hostel).where(user: current_user)
   end
 
   def new
