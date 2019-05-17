@@ -1,3 +1,44 @@
-// _home.scss
+.banner {
+  color: white;
+  text-align: center;
+  height: 80vh;
+  background-size: cover !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+.banner h1 {
+  font-size: 50px;
+  font-weight: bold;
+  text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+}
+.banner p {
+  font-size: 24px;
+  font-weight: lighter;
+  color: white;
+  margin-bottom: 20px;
+}
 
-/* Add a white navbar */
+// .container {
+//   text-align: center;
+// }
+
+.btn {
+  border-radius: 10px;
+}
+
+.border-radius {
+  border-radius: 10px;
+}
+
+.title-index-padding {
+  padding-bottom: 30px;
+}
+
+.center-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
