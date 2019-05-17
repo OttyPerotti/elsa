@@ -1,4 +1,4 @@
-class BookingPolicy < ApplicationPolicy
+class HostelPolicy < ApplicationPolicy
   class Scope < Scope
     def resolve
       scope.all
