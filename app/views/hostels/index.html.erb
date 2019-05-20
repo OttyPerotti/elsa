@@ -10,6 +10,7 @@
         <div>
             <h2><%= hostel.name %></h2>
             <button type="button" class="btn btn-light"><%= link_to "Show more", hostel_path(hostel) %></button>
+             <button type="button" class="btn btn-light"><%= link_to "Book", edit_hostel_path(hostel) %></button>
           <p><%= hostel.address %></p>
           <h2 class="card-trip-pricing">£99.99</h2>
         </div>
@@ -17,17 +18,20 @@
     </div>
   <% end %>
 </div>
-
-<div class="footer">
-  <div class="footer-links">
-    <a href="#"><i class="fab fa-github"></i></a>
-    <a href="#"><i class="fab fa-instagram"></i></a>
-    <a href="#"><i class="fab fa-facebook"></i></a>
-    <a href="#"><i class="fab fa-twitter"></i></a>
-    <a href="#"><i class="fab fa-linkedin"></i></a>
-  </div>
-  <div class="footer-copyright">
-    This footer is made with <i class="fas fa-heart"></i> at Le Wagon
+<br>
+<br>
+<br>
+<div class="containerr">
+   <div class="footer">
+    <div class="footer-links">
+      <a href="#"><i class="fab fa-github"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+    </div>
+    <div class="footer-copyright">
+      Contact us
+    </div>
   </div>
 </div>
-

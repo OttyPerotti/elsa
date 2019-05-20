@@ -28,8 +28,8 @@ class HostelsController < ApplicationController
   end
 
   def edit
-    authorize @hostel
     @hostel = Hostel.find(params[:id])
+    authorize @hostel
   end
 
   def update
