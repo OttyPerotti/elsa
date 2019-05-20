@@ -49,6 +49,7 @@ hostel2 = Hostel.create!(
   address: 'The Savanah',
   city_name: 'Le Wagonish',
   user: owner
+)
 
 hostel3 = Hostel.create!(
   name: "BlaBla - Hostel",
