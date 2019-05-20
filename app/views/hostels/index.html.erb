@@ -1,5 +1,20 @@
-<h1>Hostels#index</h1>
+<h1>Hostels</h1>
 <p>Find me in app/views/hostels/index.html.erb</p>
-<% @hostels.each do |hostel| %>
-  <h3><%= hostel.name %> <%= link_to "Delete this", hostel_path(hostel), method: :delete  %></h3>
-<% end %>
+
+<div class="container" >
+  <div class="card-trip">
+    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg">
+    <div class="card-trip-infos">
+      <div>
+        <% @hostels.each do |hostel| %>
+          <h2><%= hostel.name %></h2>
+          <h3><%= link_to "Delete this", hostel_path(hostel), method: :delete  %></h3>
+        <% end %>
+        <p>Short description here!</p>
+        <h2 class="card-trip-pricing">£99.99</h2>
+        <img src='https://kitt.lewagon.com/placeholder/users/krokrob' class="card-trip-user avatar-bordered"/>
+      </div>
+    </div>
+  </div>
+</div>
+
