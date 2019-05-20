@@ -20,6 +20,16 @@
       Bookings This Week
     </div>
     <div class="card-style" style="background-color: #e24a65" placeholder = "total earnings">
-       <% # @bookings.count %>
+       £<%= @earnings %>
       Total Earnings
     </div>
+
+
+
+<table class ="payment_table"> <tr> <th>Full Name</th> <th>Room ID</th><tr> <th>Dates</th> <th>Nights</th><tr> <th>Amount Paid</th></tr>
+
+  @booking.latest_bookings[]
+
+
+
+
