@@ -1,7 +1,15 @@
+.navbar {
+  padding-left:0px !important;
+  margin-left: 0px;
+}
+
+
+
 .navbar-lewagon {
   justify-content: space-between !important;
   background: white;
   width: 100%;
+  padding-left: 0;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -9,8 +17,16 @@
 
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+.logo {
+  top: 0;
+  left: 0;
+  background-position: center;
+  height:56px;
+  width: 150px;
+  // width: 150px;
+  // height: 150px;
+  background-size: cover;
+
 }
 
 // .text-justify {

@@ -24,7 +24,6 @@ user = User.create!(
   nationality: 'British',
   age: '99'
 )
-
 user.save!
 
 user1 = User.create!(
@@ -50,6 +49,7 @@ hostel2 = Hostel.create!(
   address: 'The Savanah',
   city_name: 'Le Wagonish',
   user: user1,
+
 )
 
 booking = Booking.create!(
