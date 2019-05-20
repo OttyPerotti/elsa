@@ -5,7 +5,10 @@
   width: 300px;
   display: inline-block;
   justify-content: space-between;
-  margin-left: 10px;
+}
+
+.container {
+  margin: 0;
 }
 
 .card-trip > img {
@@ -35,9 +38,10 @@
   position: relative;
 }
 
-.card-trip-infos .card-trip-user {
+.card-trip-infos .card-trip-use {
   position: absolute;
   right: 16px;
   top: -20px;
   width: 40px;
 }
+

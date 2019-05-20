@@ -6,8 +6,8 @@ class HostelsController < ApplicationController
   end
 
   def new
-    authorize @hostel
     @hostel = Hostel.new
+    authorize @hostel
   end
 
   def create

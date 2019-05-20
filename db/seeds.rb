@@ -52,6 +52,20 @@ hostel2 = Hostel.create!(
 
 )
 
+hostel3 = Hostel.create!(
+  name: "BlaBla - Hostel",
+  address: 'Redland 15',
+  city_name: 'London',
+  user: user,
+)
+
+hostel4 = Hostel.create!(
+  name: "Beds Friends - Hostel",
+  address: '108 Kinsdhsle',
+  city_name: 'Berlin',
+  user: user1,
+)
+
 booking = Booking.create!(
   nights: 2,
   user: user,
