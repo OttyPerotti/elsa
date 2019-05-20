@@ -26,12 +26,13 @@
 
 
 
-<table class ="payment_table"> <tr> <th>Full Name</th> <th>Room ID</th><tr> <th>Dates</th> <th>Nights</th><tr> <th>Amount Paid</th></tr>
-  <tr> <th> <% @booking.user_id.last %></th> <th>Room ID</th><tr> <th>Dates</th> <th>Nights</th><tr> <th>Amount Paid</th></tr>
-  <tr> <th>Full Name</th> <th>Room ID</th><tr> <th>Dates</th> <th>Nights</th><tr> <th>Amount Paid</th></tr>
-  <tr> <th>Full Name</th> <th>Room ID</th><tr> <th>Dates</th> <th>Nights</th><tr> <th>Amount Paid</th></tr>
-  <tr> <th>Full Name</th> <th>Room ID</th><tr> <th>Dates</th> <th>Nights</th><tr> <th>Amount Paid</th></tr>
-  <tr> <th>Full Name</th> <th>Room ID</th><tr> <th>Dates</th> <th>Nights</th><tr> <th>Amount Paid</th></tr>
+<table class ="payment_table">
+ <tr> <th>User_id</th> <th>Hostel_id</th><tr> <th>Nights</th> <tr> <th>Amount Paid</th></tr>
+ <%  @latest_bookings.each do |late_booking| %>
+ <tr><td><%= late_booking.user_id %></td> <td><%= late_booking.hostel_id %></td> <td><%= late_booking.nights %></td> <td><%= late_booking.price %></td></tr>
+ <!-- <tr><td><%= late_booking.user_id %></td> <td><%= late_booking.hostel_id %></td> <td><%= late_booking.nights %></td> <td><%= late_booking.price %></td></tr>
+ <tr><td><%= late_booking.user_id %></td> <td><%= late_booking.hostel_id %></td> <td><%= late_booking.nights %></td> <td><%= late_booking.price %></td></tr> -->
+ <% end %>
 </table>
 
 
