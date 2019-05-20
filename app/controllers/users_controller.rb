@@ -28,4 +28,14 @@ before_action :check_authorization
     end
     return arr_earnings_for_each_hostel.reduce(0) { |sum, num| sum + num }
   end
+
+  def booking_details_latest
+    bookings.map do |booking|
+      if booking.price
+        booking.map do |b|
+          return b[1], b[2], b[3], b[6]
+        end
+      end
+    end
+  end
 end
