@@ -2,15 +2,30 @@ class UsersController < ApplicationController
 before_action :check_authorization
   def show
     @user = User.find(params[:id])
-    @hostel = Hostel.where(user: current_user)
-    @latest_bookings = @hostel.first.bookings.order(created_at: :desc).limit(5)
+    hostels = Hostel.where(user: current_user)
+    @earnings = calculate_total_earnings(hostels)
+    # @latest_bookings = @hostel.first.bookings.order(created_at: :desc).limit(5)
   end
 
   private
 
-  private
   def check_authorization
     authorize :user
   end
 
+  def calculate_total_earnings(hostels)
+    # binding.pry
+    arr_earnings_for_each_hostel = []
+    hostels.each do |hostel|
+      sum = 0
+      if hostel.bookings
+        hostel.bookings.each do |booking|
+          sum += booking.price
+          # raise
+        end
+      end
+      arr_earnings_for_each_hostel << sum
+    end
+    return arr_earnings_for_each_hostel.reduce(0) { |sum, num| sum + num }
+  end
 end

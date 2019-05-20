@@ -15,7 +15,7 @@ User.all.each do |user|
   user.destroy
 end
 
-user = User.create!(
+guest = User.create!(
   email: 'test@example.com',
   password: '123456',
   user_type: 'guest',
@@ -24,40 +24,51 @@ user = User.create!(
   nationality: 'British',
   age: '99'
 )
-user.save!
+guest.save!
 
-user1 = User.create!(
+owner = User.create!(
   email: 'test2@example.com',
   password: '123456',
   user_type: 'owner',
   first_name: 'Miriam',
   last_name: 'Kennedy',
   nationality: 'German',
-  age: '20',
+  age: '20'
 )
-user1.save!
+owner.save!
 
 hostel = Hostel.create!(
   name: "Under The Dragon's Balls - Hostel",
   address: 'Dragon Lane',
   city_name: 'Le Wagonia',
-  user: user,
+  user: owner
 )
 
 hostel2 = Hostel.create!(
   name: "Hakuna Matata - Hostel",
   address: 'The Savanah',
   city_name: 'Le Wagonish',
-  user: user1,
+  user: owner
 
 )
 
 booking = Booking.create!(
   nights: 2,
-  user: user,
+  user: guest,
   hostel: hostel,
+  price: 10
 )
+
+
+booking1 = Booking.create!(
+  nights: 3,
+  user: guest,
+  hostel: hostel,
+  price: 20
+)
+
 booking.save!
+booking1.save!
 
 
 
