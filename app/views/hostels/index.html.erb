@@ -1,11 +1,11 @@
-<h1>Hostels</h1>
+<h1 class="header">Hostels</h1>
 
 <button type="button" class="btn btn-light"><%= link_to "Create", new_hostel_path %></button>
 
-<div class="container" >
+<div class="containery">
   <% @hostels.each do |hostel| %>
     <div class="card-trip">
-      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg">
+      <img src="https://images.pexels.com/photos/2277653/pexels-photo-2277653.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">
       <div class="card-trip-infos">
         <div>
             <h2><%= hostel.name %></h2>
