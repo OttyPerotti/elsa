@@ -5,7 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-Booking.destroy.all
+Booking.destroy_all
 
 Hostel.all.each do |hostel|
   hostel.destroy
@@ -43,12 +43,19 @@ hostel = Hostel.create!(
   city_name: 'Le Wagonia',
   user: user,
 )
-hostel.save!
+
+hostel2 = Hostel.create!(
+  name: "Hakuna Matata - Hostel",
+  address: 'The Savanah',
+  city_name: 'Le Wagonish',
+  user: user1,
+
+)
 
 booking = Booking.create!(
   nights: 2,
-  user_id: 1,
-  hostel_id: 1,
+  user: user,
+  hostel: hostel,
 )
 booking.save!
 
