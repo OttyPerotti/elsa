@@ -8,7 +8,7 @@ class Room < ApplicationRecord
 
 
 
-  def last_room_booked
-    self.hostel.where({@user.booking.last})
-  end
+  # def last_room_booked
+  #   self.hostel.where({@user.booking.last})
+  # end
 end
