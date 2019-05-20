@@ -1,13 +1,13 @@
 class HostelsController < ApplicationController
-  skip_before_action :authenticate_user!, only: :index
+  skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
     @hostels = policy_scope(Hostel)
   end
 
   def new
-    authorize @hostel
     @hostel = Hostel.new
+    authorize @hostel
   end
 
   def create
@@ -45,7 +45,7 @@ class HostelsController < ApplicationController
   def destroy
     set_hostel
     authorize @hostel
-    if @Hostel.destroy!
+    if @Hostel.destroy
       redirect_to @hostels, notice: 'Hostel was succesfully removed'
     else
       render :index
