@@ -1,5 +1,7 @@
 <h1>Hostels</h1>
 
+<button type="button" class="btn btn-light"><%= link_to "Create", new_hostel_path %></button>
+
 <div class="container" >
   <% @hostels.each do |hostel| %>
     <div class="card-trip">
@@ -7,8 +9,8 @@
       <div class="card-trip-infos">
         <div>
             <h2><%= hostel.name %></h2>
-            <h4><%= link_to "Delete this", hostel_path(hostel), method: :delete  %></h4>
-          <p>Short description here!</p>
+            <button type="button" class="btn btn-light"><%= link_to "Show more", hostel_path(hostel) %></button>
+          <p><%= hostel.address %></p>
           <h2 class="card-trip-pricing">£99.99</h2>
         </div>
       </div>

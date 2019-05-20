@@ -1,20 +1,25 @@
-<%= @user.email %>
+<div class="navbar-dashboard">
+  <h1><%= @user.email.capitalize %><Dashboard></h1>
+  <div class="top_buttons">
+    <button class ="btn btn-primary">Payment Method</button>
 
-<% if current_user.hostel_owner == true %>
-  <div>
-    <%= current_user.hostels.each do %>
-    <% end %>
+    <button class ="btn btn-success">Partner Invoices</button>
+
+    <button class ="btn btn-danger">Log out</button>
   </div>
-<% else %>
+</div>
 
-<% end %>
-
-<% if user_signed_in? %>
-  <li>
-  <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
-  </li>
-<% else %>
-  <li>
-  <%= link_to('Login', new_user_session_path)  %>
-  </li>
-<% end %>
+<div class="container">
+  <div class="cards_summaries">
+    <div class="card-style" style="background-color: #e24a65">
+    <%= @user.hostels.count  %>
+    Total Guests
+    </div>
+    <div class="card-style" style="background-color: #e24a65">
+     <%= @user.last_week_bookings %>
+      Bookings This Week
+    </div>
+    <div class="card-style" style="background-color: #e24a65" placeholder = "total earnings">
+       <% # @bookings.count %>
+      Total Earnings
+    </div>
