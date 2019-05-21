@@ -12,8 +12,6 @@
 
 ActiveRecord::Schema.define(version: 2019_05_21_154618) do
 
-
-
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -39,12 +37,10 @@ ActiveRecord::Schema.define(version: 2019_05_21_154618) do
     t.datetime "updated_at", null: false
     t.float "latitude"
     t.float "longitude"
-
     t.integer "price"
     t.string "photo1"
     t.string "photo2"
     t.string "photo3"
-    
     t.index ["user_id"], name: "index_hostels_on_user_id"
   end
 
