@@ -10,4 +10,10 @@ class Booking < ApplicationRecord
   # validates :hostel_id, uniqueness: true, presence: true
   # validates :room_id, uniqueness: true, presence: true // this is being commented
   # out as MPV 1 while not have rooms db as per TA's advice
+
+  # def last_hostel_booking_user
+
+  # end
+
+
 end

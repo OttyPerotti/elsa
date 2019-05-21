@@ -1,13 +1,13 @@
 class HostelsController < ApplicationController
-  skip_before_action :authenticate_user!, only: :index
+  skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
     @hostels = policy_scope(Hostel).where(user: current_user)
   end
 
   def new
-    authorize @hostel
     @hostel = Hostel.new
+    authorize @hostel
   end
 
   def create
@@ -20,16 +20,20 @@ class HostelsController < ApplicationController
   end
 
   def show
-    @hostel = Hostel.find(params[:id])
+    set_hostel
     authorize @hostel
+
+    @hostel = Hostel.find(params[:id])
+    # @bookings = @hostel.bookings
   end
 
   def edit
-    authorize @hostel
     @hostel = Hostel.find(params[:id])
+    authorize @hostel
   end
 
   def update
+    set_hostel
     authorize @hostel
     if @hostel = Hostel.update(hostels_params)
       redirect_to hostels_path, notice: 'Hostel was succesfully updated'
@@ -39,7 +43,7 @@ class HostelsController < ApplicationController
   end
 
   def destroy
-    @hostel = Hostel.find(params[:id])
+    set_hostel
     authorize @hostel
     if @hostel.destroy!
       redirect_to hostels_path, notice: 'Hostel was succesfully removed'
@@ -52,5 +56,9 @@ class HostelsController < ApplicationController
 
   def hostel_params
     params.require(:hostel).permit(:name, :address, :city_name)
+  end
+
+  def set_hostel
+    @hostel = Hostel.find(params[:id])
   end
 end
