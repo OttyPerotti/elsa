@@ -38,7 +38,7 @@ owner = User.create!(
 owner.save!
 
 hostel = Hostel.create!(
-  name: "Under The Dragon's Balls - Hostel",
+  name: "Cresei's Inn - All welcome!",
   address: 'Dragon Lane',
   city_name: 'Le Wagonia',
   user: owner,
