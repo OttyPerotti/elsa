@@ -3,7 +3,7 @@
 
 <% @bookings.each do |booking| %>
 <h3><%= "nights at" %></h3>
-  <h3><%= booking.hostel.name %></h3>
+  <h3><%=booking.hostel.name %></h3>
   <h3><%=booking.hostel.city_name %></h3>
   <h3><%= booking.nights%> </h3>
   <%= link_to "Delete this", method: :delete  %>
