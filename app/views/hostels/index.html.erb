@@ -10,9 +10,9 @@
         <div>
             <h2><%= hostel.name %></h2>
             <button type="button" class="btn btn-light"><%= link_to "Show more", hostel_path(hostel) %></button>
-             <button type="button" class="btn btn-light"><%= link_to "Book", edit_hostel_path(hostel) %></button>
+             <button type="button" class="btn btn-light"><%= link_to "Book", new_booking_path %></button>
           <p><%= hostel.address %></p>
-          <h2 class="card-trip-pricing">£99.99</h2>
+          <h2 class="card-trip-pricing"><%= hostel.price %></h2>
         </div>
       </div>
     </div>
@@ -27,7 +27,6 @@
       <a href="#"><i class="fab fa-github"></i></a>
       <a href="#"><i class="fab fa-instagram"></i></a>
       <a href="#"><i class="fab fa-facebook"></i></a>
-      <a href="#"><i class="fab fa-twitter"></i></a>
       <a href="#"><i class="fab fa-linkedin"></i></a>
     </div>
     <div class="footer-copyright">
