@@ -1,19 +1,8 @@
 <h1 class="header">Hostels</h1>
 
-<!-- <button type="button" class="btn btn-light"><%= link_to "Create", new_hostel_path %></button> -->
+<button type="button" class="btn btn-light"><%= link_to "Create", new_hostel_path %></button>
 
 <div class="containery">
-  <div class="card-trip">
-    <!-- <img src="https://images.pexels.com/photos/2277653/pexels-photo-2277653.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"> -->
-    <%= cl_image_tag("hostel.jpg",
-    width: 400, height: 300, crop: :fill) %>
-    <div class="card-trip-infos">
-      <div>
-          <h2><%= @hostels.name %></h2>
-          <button type="button" class="btn btn-light"><%= link_to "Show more", hostel_path(hostel) %></button>
-           <button type="button" class="btn btn-light"><%= link_to "Book", edit_hostel_path(hostel) %></button>
-        <p><%= @hostels.address %></p>
-        <h2 class="card-trip-pricing">£99.99</h2>
   <% @hostels.each do |hostel| %>
     <div class="card-trip">
       <img src=<%= hostel.photo1 %>>
@@ -27,19 +16,8 @@
         </div>
       </div>
     </div>
-  </div>
+  <% end %>
 </div>
-<!--cards html end -->
-<div id="map-container">
-  <div
-    id="map"
-    style="width: 100%;
-    height: 600px;"
-    data-markers="<%= @markers.to_json %>"
-    data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
-  ></div>
-</div>
-<!-- mapbox html ends^^ -->
 <br>
 <br>
 <br>
