@@ -1,3 +1,6 @@
+<script src="https://js.stripe.com/v3/"></script>
+
+
 <div class="business-dashboard">
 <!-- <div class="navbar-dashboard"> -->
   <h1>Welcome to your DashBoard <%= @user.email %>!</h1>
@@ -55,7 +58,7 @@
 
 
 <div class="top-buttons">
-    <button class ="btn btn-primary btn-lg">Payment Method</button>
+    <button class ="btn btn-primary btn-lg" id='show'>Payment Method</button>
 
     <button class ="btn btn-success btn-lg">Partner Invoices</button>
 
@@ -63,9 +66,10 @@
 </div>
 
 
-<form class="payment">
 
-  <body>
+<form class="payment" id="form" style="display: none;" onsubmit="return validateForm()">
+<body>
+ <div class="payment-content">
     <div class="panel panel-default credit-card-box">
       <div class="panel-heading display-table">
         <div class="row display-tr">
@@ -75,22 +79,24 @@
       </div>
     </div>
     <br>
-    <label for="cardNumber">CARD NUMBER</label>
-    <input type="text" size="10" class="form-control" name="cardNumber" placeholder="Valid Card Number" autocomplete="cc-number" required autofocus />
-    <span class="input-group-addon"><i class="fa fa-credit-card"></i></span>
-    <label for="cardExpir">EXPIRATION DATE</label>
-    <input type="text" size="5" class="form-control" name="cardExpiry" placeholder="MM / YY" autocomplete="cc-exp" required />
-    <label for="cardCVC">CV CODE</label>
-    <input type="text" size="3" class="form-control" name="cardCVC" placeholder="CVC" autocomplete="cc-csc" required />
-    <label for="couponCode">DISCOUNT CODE</label>
-    <input type="text" class="form-control" name="couponCode" />
+     <label for="cardNumber">CARD NUMBER*</label>
+       <input type="text" size="10" class="form-control" name="cardNumber" placeholder="Valid Card Number" autocomplete="cc-number" required autofocus />
+       <span class="input-group-addon"><i class="fa fa-credit-card"></i></span>
+     <label for="cardExpiry">EXPIRATION DATE*</label>
+       <input type="text" size="5" class="form-control" name="cardExpiry" placeholder="MM / YY" autocomplete="cc-exp" required />
+     <label for="cardCVC">CV CODE*</label>
+       <input type="text" size="3" class="form-control" name="cardCVC" placeholder="CVC" autocomplete="cc-csc" required />
+     <label for="couponCode">DISCOUNT CODE</label>
+      <input type="text" class="form-control" name="couponCode"/>
     <br>
-    <button class="blueButton" style="float:right;" type="submit">Confirm Payment</button>
-    <br><br>
+     <button class="blueButton" id='hide' style="float:right;" type="submit">Confirm Payment</button>
+    <br>
+    <br>
+ </div>
 </form>
+
 <!-- If you're using Stripe for payments -->
-<script type="text/javascript" src="https://js.stripe.com/v2/"></script>
-</form>
+
 </body>
 </div>
 
