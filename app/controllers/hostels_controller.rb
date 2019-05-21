@@ -36,6 +36,15 @@ class HostelsController < ApplicationController
 
     @hostel = Hostel.find(params[:id])
     # @bookings = @hostel.bookings
+    # map functionality below:
+    @hostel = Hostel.where.not(latitude: nil, longitude: nil)
+    @marker = @hostel.map do |hostel|
+      {
+        lat: hostel.latitude,
+        lng: hostel.longitude
+      }
+      # added a map on the show pay
+    end
   end
 
   def edit
