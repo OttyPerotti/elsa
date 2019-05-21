@@ -1,6 +1,6 @@
 <h1 class="header">Hostels</h1>
 
-<button type="button" class="btn btn-light"><%= link_to "Create", new_hostel_path %></button>
+<!-- <button type="button" class="btn btn-light"><%= link_to "Create", new_hostel_path %></button> -->
 
 <div class="containery">
   <% @hostels.each do |hostel| %>
@@ -18,6 +18,15 @@
     </div>
   <% end %>
 </div>
+<!--cards html end -->
+<div
+  id="map"
+  style="width: 100%;
+  height: 600px;"
+  data-markers="<%= @markers.to_json %>"
+  data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+></div>
+<!-- mapbox html ends^^ -->
 <br>
 <br>
 <br>
@@ -35,3 +44,11 @@
     </div>
   </div>
 </div>
+<!--
+<div
+  id="map"
+  style="width: 100%;
+  height: 600px;"
+  data-markers="<%= @markers.to_json %>"
+  data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+></div> -->

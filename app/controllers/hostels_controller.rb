@@ -2,7 +2,18 @@ class HostelsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
-    @hostels = policy_scope(Hostel).where(user: current_user)
+      @hostels = policy_scope(Hostel).where(user: current_user)
+      @hostels = Hostel.all
+      # added this to return all hostels!
+
+      @hostels = Hostel.where.not(latitude: nil, longitude: nil)
+      @markers = @hostels.map do |hostel|
+        {
+        lat: hostel.latitude,
+        lng: hostel.longitude
+        # infoWindow: render_to_string(partial: "infowindow", locals: { hostel: hostel })
+        }
+    end
   end
 
   def new
@@ -25,6 +36,15 @@ class HostelsController < ApplicationController
 
     @hostel = Hostel.find(params[:id])
     # @bookings = @hostel.bookings
+    # map functionality below:
+    @hostel = Hostel.where.not(latitude: nil, longitude: nil)
+    @marker = @hostel.map do |hostel|
+      {
+        lat: hostel.latitude,
+        lng: hostel.longitude
+      }
+      # added a map on the show pay
+    end
   end
 
   def edit
