@@ -10,23 +10,29 @@
         <div>
             <h2><%= hostel.name %></h2>
             <button type="button" class="btn btn-light"><%= link_to "Show more", hostel_path(hostel) %></button>
+
              <button type="button" class="btn btn-light"><%= link_to "Book", edit_hostel_path(hostel) %></button>
           <div>
             <p><%= hostel.address %></p>
             <h2 class="card-trip-pricing">£99.99</h2>
           </div>
-          <!-- <div> -->
-           <!--  <p>Cashback</p>
-            <h2 class="card-trip-cashback"><%=  %></h2> -->
-            <!-- added a cashback functionality -->
-          <!-- </div> -->
              <button type="button" class="btn btn-light"><%= link_to "Book", new_booking_path %></button>
+             <button type="button" class="btn btn-light"><%= link_to "Book", new_hostel_booking_path(hostel) %></button>
           <p><%= hostel.address %></p>
           <h2 class="card-trip-pricing"><%= hostel.price %></h2>
         </div>
       </div>
     </div>
   <% end %>
+</div>
+<div id="map-container">
+  <div
+    id="map"
+    style="width: 100%;
+    height: 600px;"
+    data-markers="<%= @markers.to_json %>"
+    data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+  ></div>
 </div>
 <br>
 <br>
