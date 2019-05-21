@@ -2,7 +2,7 @@ class HostelsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
-    @hostels = policy_scope(Hostel)
+    @hostels = policy_scope(Hostel).where(user: current_user)
   end
 
   def new
@@ -45,8 +45,8 @@ class HostelsController < ApplicationController
   def destroy
     set_hostel
     authorize @hostel
-    if @Hostel.destroy
-      redirect_to @hostels, notice: 'Hostel was succesfully removed'
+    if @hostel.destroy!
+      redirect_to hostels_path, notice: 'Hostel was succesfully removed'
     else
       render :index
     end
