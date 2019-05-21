@@ -5,4 +5,10 @@ class Room < ApplicationRecord
   validates :type, presence: true
   validates :hostel_id, uniqueness: true, presence: true
   validates :availability, presence: { in: [true, false] }
+
+
+
+  # def last_room_booked
+  #   self.hostel.where({@user.booking.last})
+  # end
 end

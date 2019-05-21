@@ -5,8 +5,14 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   USER_TYPES = ["owner", "guest"]
   NATIONALITIES = ["American", "British", "Italian", "Polish"]
-  has_many :hostels # add an if condition for user_type
+  has_many :hostels # add an if statement depending on user_type
   has_many :bookings
+
+
+
+   def last_week_bookings
+    self.hostels.map{|hostel| hostel.bookings.where({ created_at:(Time.now.midnight - 7.day)..Time.now.midnight}).count}.sum
+   end
 
   # validates :user_type, presence: true
   # validates :first_name, presence: true

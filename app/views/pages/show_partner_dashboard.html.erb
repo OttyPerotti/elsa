@@ -1,36 +1,63 @@
 <div class="navbar-dashboard">
   <h1><%= user.name.capitalize %><Dashboard></h1>
-  <div class="top_buttons">
-    <button class ="btn btn-primary">Payment Method</button>
+ <div class="top_buttons">
+   <button class ="btn btn-primary">Payment Method</button>
 
-    <button class ="btn btn-success">Partner Invoices</button>
+   <button class ="btn btn-success">Partner Invoices</button>
 
-    <button class ="btn btn-danger">Log out</button>
-  </div>
+   <button class ="btn btn-danger">Log out</button>
+ </div>
 </div>
 
 <div class="container">
-  <div class="cards_summaries">
-    <div class="card-style" style="background-color: orange">
-    <%= @hostel.user.count  %>
-    Total Guests
-    </div>
-    <div class="card-style" style="background-color: orange">
-     <%= @bookings.show.count.where ({ created_at:(Time.now.midnight - 7.day)..Time.now.midnight}) %>
-      Bookings This Week
-    </div>
-    <div class="card-style" style="background-color: orange">
-      <%= @hostel. %>
-      Total Earnings
-    </div>
-  </div>
-  <%= table_for order.payments do %>
-    column "name",
-    column "Room_Id",
-    column "Dates",
-    column "Nights",
-    column "Amount Paid",
-  <% end %>
+ <div class="cards_summaries">
+  <div class="card-style" style="background-color: orange">
+   <%= @hostel.user WHERE    %>
+
+
+
+
+  Total Guests</div>
+  <div class="card-style" style="background-color: orange">
+   <%= @hostel.bookings.each do ||  %>
+
+
+
+  Bookings This Week</div>
+  <div class="card-style" style="background-color: orange">
+   <%=  %>
+
+
+
+
+  Total Earnings</div>
+ </div>
+
+
+
+
+
+<%= table_for order.payments do %>
+  column "name",
+  column "Room_Id",
+  column "Dates",
+  column "Nights",
+  column "Amount Paid",
+
+<% end %>
+
+
+
+
+
+
+
+
+
+
+
+
+
 </div>
 
 
