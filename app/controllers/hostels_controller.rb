@@ -2,6 +2,10 @@ class HostelsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
+      @hostels = policy_scope(Hostel).where(user: current_user)
+      @hostels = Hostel.all
+      # added this to return all hostels!
+
       @hostels = Hostel.where.not(latitude: nil, longitude: nil)
       @markers = @hostels.map do |hostel|
         {
@@ -10,7 +14,6 @@ class HostelsController < ApplicationController
         # infoWindow: render_to_string(partial: "infowindow", locals: { hostel: hostel })
         }
     end
-    @hostels = policy_scope(Hostel).where(user: current_user)
   end
 
   def new
