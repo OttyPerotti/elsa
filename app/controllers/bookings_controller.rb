@@ -13,7 +13,7 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
     @booking.user = current_user
     if @booking.save
-      redirect_to booking_path(@booking)
+      redirect_to booking_path(@booking), notice: "Booking successfully created"
     else
       render :new
     end
