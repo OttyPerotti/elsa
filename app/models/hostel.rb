@@ -1,7 +1,6 @@
 class Hostel < ApplicationRecord
-  has_many :rooms
-  has_many :bookings
-  # has_attachment :photo
+  has_many :rooms, dependent: :destroy
+  has_many :bookings, dependent: :destroy
   belongs_to :user
   validates :name, presence: true
   validates :address, uniqueness: true, presence: true

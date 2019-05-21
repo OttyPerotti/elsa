@@ -2,8 +2,6 @@ class HostelsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
-    @hostels = policy_scope(Hostel)
-
       @hostels = Hostel.where.not(latitude: nil, longitude: nil)
       @markers = @hostels.map do |hostel|
         {
@@ -12,6 +10,7 @@ class HostelsController < ApplicationController
         # infoWindow: render_to_string(partial: "infowindow", locals: { hostel: hostel })
         }
     end
+    @hostels = policy_scope(Hostel).where(user: current_user)
   end
 
   def new
@@ -54,8 +53,8 @@ class HostelsController < ApplicationController
   def destroy
     set_hostel
     authorize @hostel
-    if @Hostel.destroy
-      redirect_to @hostels, notice: 'Hostel was succesfully removed'
+    if @hostel.destroy!
+      redirect_to hostels_path, notice: 'Hostel was succesfully removed'
     else
       render :index
     end
