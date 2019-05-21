@@ -38,8 +38,8 @@ class HostelsController < ApplicationController
     @hostel = Hostel.find(params[:id])
     # @bookings = @hostel.bookings
     # map functionality below:
-    @hostel = Hostel.where.not(latitude: nil, longitude: nil)
-    @marker = @hostel.map do |hostel|
+    @hostel_mark = Hostel.where.not(latitude: nil, longitude: nil)
+    @marker = @hostel_mark.map do |hostel|
       {
         lat: hostel.latitude,
         lng: hostel.longitude
