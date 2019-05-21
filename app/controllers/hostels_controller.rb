@@ -3,6 +3,15 @@ class HostelsController < ApplicationController
 
   def index
     @hostels = policy_scope(Hostel)
+
+      @hostels = Hostel.where.not(latitude: nil, longitude: nil)
+      @markers = @hostels.map do |hostel|
+        {
+        lat: hostel.latitude,
+        lng: hostel.longitude
+        # infoWindow: render_to_string(partial: "infowindow", locals: { hostel: hostel })
+        }
+    end
   end
 
   def new
