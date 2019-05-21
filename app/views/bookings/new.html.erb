@@ -1,2 +1,22 @@
 
 
+
+
+
+<div class="booking-widget" style="width: 500px">
+  <div class="booking-widget-header">
+    <div class='header-caption'>
+      <h3> HOTEL NAME CO - needs edit</h3>
+        <%= simple_form_for :search, method: "get" do |f| %>
+          <%= f.input :starts_at, as: :string, required: false, input_html: {class: "datepicker"} %>
+          <%= f.input :ends_at, as: :string, required: false, input_html: {class: "datepicker"} %>
+          <%= f.select :guests, (1..10).to_a %>
+          <%= f.button :submit, "Book Now", class: "btn btn-primary", link_to create_booking_path  %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
