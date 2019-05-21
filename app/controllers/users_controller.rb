@@ -5,7 +5,7 @@ before_action :check_authorization
     hostels = Hostel.where(user: current_user)
     @earnings = calculate_total_earnings(hostels)
     # @latest_bookings = booking_details_latest
-    @latest_bookings = hostels.first.bookings.order(created_at: :desc).limit(5)
+    @latest_bookings = hostels.first.bookings.order(created_at: :desc).limit(10)
   end
 
   private
@@ -30,12 +30,5 @@ before_action :check_authorization
     return arr_earnings_for_each_hostel.reduce(0) { |sum, num| sum + num }
   end
 
-  # def booking_details_latest
-  #   bookings.map do |booking|
-  #     if booking.price
-  #        return b[1], b[2], b[3], b[6]
-  #       end
-  #     end
-  #   end
-  # end
+
 end

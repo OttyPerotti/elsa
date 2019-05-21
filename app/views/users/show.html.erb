@@ -1,16 +1,11 @@
-<div class="navbar-dashboard">
-  <h1><%= @user.email.capitalize %><Dashboard></h1>
-  <div class="top_buttons">
-    <button class ="btn btn-primary">Payment Method</button>
+<div class="business-dashboard">
+<!-- <div class="navbar-dashboard"> -->
+  <h1>Welcome to your DashBoard <%= @user.email %>!</h1>
 
-    <button class ="btn btn-success">Partner Invoices</button>
-
-    <button class ="btn btn-danger">Log out</button>
-  </div>
-</div>
+<!-- </div> -->
 
 <div class="container">
-  <div class="cards_summaries">
+  <div class="cards-summaries">
     <div class="card-style" style="background-color: #e24a65">
     <%= @user.hostels.count  %>
     Total Guests
@@ -23,17 +18,84 @@
        £<%= @earnings %>
       Total Earnings
     </div>
+  </div>
+ <div class="payments-title">
+  <h1>Recent Payments</h1>
+ </div>
+
+<div class="table-wrapper">
+    <table class="fl-table">
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>User_ID</th>
+            <th>Hostel_ID</th>
+            <th>Nights</th>
+            <th>Amount Paid</th>
+        </tr>
+        </thead>
+        <tbody>
+          <% @latest_bookings.each_with_index do |late_booking, index| %>
+           <% if late_booking.price? %>
+        <tr>
+            <td><%= index + 1 %></td>
+            <td><%= late_booking.user_id%></td>
+            <td><%= late_booking.hostel_id%></td>
+            <td><%= late_booking.nights %></td>
+            <td><%= late_booking.price %></td>
+        </tr>
+           <% end %>
+          <% end %>
+        <tbody>
+    </table>
 
 
 
-<table class ="payment_table">
- <tr> <th>User_id</th> <th>Hostel_id</th><tr> <th>Nights</th> <tr> <th>Amount Paid</th></tr>
- <%  @latest_bookings.each do |late_booking| %>
- <tr><td><%= late_booking.user_id %></td> <td><%= late_booking.hostel_id %></td> <td><%= late_booking.nights %></td> <td><%= late_booking.price %></td></tr>
- <!-- <tr><td><%= late_booking.user_id %></td> <td><%= late_booking.hostel_id %></td> <td><%= late_booking.nights %></td> <td><%= late_booking.price %></td></tr>
- <tr><td><%= late_booking.user_id %></td> <td><%= late_booking.hostel_id %></td> <td><%= late_booking.nights %></td> <td><%= late_booking.price %></td></tr> -->
- <% end %>
-</table>
+</div>
+
+
+<div class="top-buttons">
+    <button class ="btn btn-primary btn-lg">Payment Method</button>
+
+    <button class ="btn btn-success btn-lg">Partner Invoices</button>
+
+
+</div>
+
+
+<form class="payment">
+
+  <body>
+    <div class="panel panel-default credit-card-box">
+      <div class="panel-heading display-table">
+        <div class="row display-tr">
+          <h3 class="panel-title display-td">Payment Details</h3>
+          <img class="img-responsive pull-right" src="http://i76.imgup.net/accepted_c22e0.png">
+        </div>
+      </div>
+    </div>
+    <br>
+    <label for="cardNumber">CARD NUMBER</label>
+    <input type="text" size="10" class="form-control" name="cardNumber" placeholder="Valid Card Number" autocomplete="cc-number" required autofocus />
+    <span class="input-group-addon"><i class="fa fa-credit-card"></i></span>
+    <label for="cardExpir">EXPIRATION DATE</label>
+    <input type="text" size="5" class="form-control" name="cardExpiry" placeholder="MM / YY" autocomplete="cc-exp" required />
+    <label for="cardCVC">CV CODE</label>
+    <input type="text" size="3" class="form-control" name="cardCVC" placeholder="CVC" autocomplete="cc-csc" required />
+    <label for="couponCode">DISCOUNT CODE</label>
+    <input type="text" class="form-control" name="couponCode" />
+    <br>
+    <button class="blueButton" style="float:right;" type="submit">Confirm Payment</button>
+    <br><br>
+</form>
+<!-- If you're using Stripe for payments -->
+<script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+</form>
+</body>
+</div>
+
+
+
 
 
 
