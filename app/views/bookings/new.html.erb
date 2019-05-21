@@ -1,2 +1,18 @@
-
-
+<div class="booking-widget">
+  <div class='booking-widget__header'>
+    <figure>
+      <img src='url of the photo associated with the hostel'>
+      <figcaption class='header-caption'>
+        <h3><%= @hostel.name %></h3>
+        <span id=""><i class="fa fa-map-marker" aria-hidden="true"></i><%= @hostel.address %></span>
+      </figcaption>
+    </figure>
+  </div>
+  <div class="booking-widget" style="width: 400px" >
+    <%= form_for [@hostel, @booking] do |f| %>
+      <%= f.text_field :nights %>
+      <%= f.text_field :guests %>
+      <%= f.submit "Book" %>
+    <% end %>
+  </div>
+</div>

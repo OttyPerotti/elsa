@@ -4,11 +4,19 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   width: 300px;
   display: inline-block;
-  justify-content: space-between;
+  margin: 20px;
 }
 
-.container {
-  margin: 0;
+.header {
+  text-align: center;
+}
+
+.containery {
+  // margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // flex-wrap: wrap;
 }
 
 .card-trip > img {
@@ -38,10 +46,17 @@
   position: relative;
 }
 
-.card-trip-infos .card-trip-use {
+.card-trip-infos .card-trip-user {
   position: absolute;
   right: 16px;
   top: -20px;
   width: 40px;
 }
 
+#map-container {
+    height: 500px;
+    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

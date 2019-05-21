@@ -1,8 +1,18 @@
 class HostelsController < ApplicationController
-  skip_before_action :authenticate_user!, only: :index
+  skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
-    @hostels = policy_scope(Hostel)
+      @hostels = policy_scope(Hostel)
+      # added this to return all hostels!
+
+      @marked_hostels = Hostel.where.not(latitude: nil, longitude: nil)
+      @markers = @marked_hostels.map do |hostel|
+        {
+        lat: hostel.latitude,
+        lng: hostel.longitude
+        # infoWindow: render_to_string(partial: "infowindow", locals: { hostel: hostel })
+        }
+    end
   end
 
   def new
@@ -11,12 +21,14 @@ class HostelsController < ApplicationController
   end
 
   def create
+    @hostel = Hostel.new(hostel_params)
     @hostel.user = current_user
-    @hostel = Hostel.new(hostels_params)
     authorize @hostel
-    @hostel = Hostel.save
-
-    redirect_to hostel_path(@hostel)
+    if @hostel.save
+      redirect_to hostel_path(@hostel)
+    else
+      render :new
+    end
   end
 
   def show
@@ -25,11 +37,21 @@ class HostelsController < ApplicationController
 
     @hostel = Hostel.find(params[:id])
     # @bookings = @hostel.bookings
+    # map functionality below:
+
+    @hostel_mark = Hostel.where.not(latitude: nil, longitude: nil)
+    @marker = @hostel_mark.map do |hostel|
+      {
+        lat: hostel.latitude,
+        lng: hostel.longitude
+      }
+      # added a map on the show pay
+    end
   end
 
   def edit
-    authorize @hostel
     @hostel = Hostel.find(params[:id])
+    authorize @hostel
   end
 
   def update
@@ -45,8 +67,8 @@ class HostelsController < ApplicationController
   def destroy
     set_hostel
     authorize @hostel
-    if @Hostel.destroy!
-      redirect_to @hostels, notice: 'Hostel was succesfully removed'
+    if @hostel.destroy!
+      redirect_to hostels_path, notice: 'Hostel was succesfully removed'
     else
       render :index
     end

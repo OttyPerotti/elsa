@@ -2,9 +2,11 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
 
-  resources :bookings
-  resources :hostels
+  resources :hostels do
+    resources :bookings
+  end
   resources :users, only: [:show]
+  get 'my_bookings', to: "users#my_bookings", as: :my_bookings
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   # adding routes for the b2b dashboard below:

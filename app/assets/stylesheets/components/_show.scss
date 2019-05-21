@@ -1,5 +1,6 @@
 
 
+
 // input:required,
 // type:required {
 //   border-color: red !important;
@@ -184,6 +185,7 @@ h2{
 
 
 
+
 .carousel-item {
     height: 500px;
     width: 50%;
@@ -202,7 +204,11 @@ h1 {
 
 .container {
   margin: 20px;
+
   // border: 3px solid black;
+
+  border: 3px solid black;
+
   padding: 10px;
 
 }
@@ -221,6 +227,7 @@ h1 {
   color: white;
 
 }
+
 
 
 body {
@@ -360,4 +367,12 @@ Below is the form for the confirm order table
 
 
 
+
+#map-container {
+    height: 500px;
+    width: 1140px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 

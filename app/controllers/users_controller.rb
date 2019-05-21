@@ -1,11 +1,16 @@
 class UsersController < ApplicationController
-before_action :check_authorization
+  before_action :check_authorization
+
   def show
     @user = User.find(params[:id])
     hostels = Hostel.where(user: current_user)
     @earnings = calculate_total_earnings(hostels)
     # @latest_bookings = booking_details_latest
     @latest_bookings = hostels.first.bookings.order(created_at: :desc).limit(10)
+  end
+
+  def my_bookings
+    @bookings = Booking.where(user: current_user)
   end
 
   private
