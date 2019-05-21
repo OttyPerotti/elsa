@@ -1,2 +1,24 @@
-
-
+<div class="booking-widget">
+  <div class='booking-widget__header'>
+    <figure>
+      <img src='url of the photo associated with the hostel'>
+      <figcaption class='header-caption'>
+        <h3> Display here the name of the hostel that is being booked </h3>
+        <span id=""><i class="fa fa-map-marker" aria-hidden="true"></i> DISPLAY HERE LOCATION of the hostel that is being booked</span>
+      </figcaption>
+    </figure>
+  </div>
+  <div class="booking-widget" style="width: 400px" >
+    <%= simple_form_for :search, method: "get" do |f| %>
+    <%= f.input :Starts, as: :string, required: false, input_html: {class: "datepicker"} %>
+    <%= f.input :ends_at, as: :string, required: false, input_html: {class: "datepicker"} %>
+    <div class='form__dropdown'>
+      <label for="Guests" class="form__dropdown">Guests <%= f.select :guests, (1..10).to_a %></label>
+    </div>
+    <button class="btn btn-primary">
+      <%= link_to "Delete this", method: :create  %>
+    </%> </button>
+  </div>
+    <% end %>
+  </form>
+</div>
