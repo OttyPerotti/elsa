@@ -2,12 +2,11 @@ class HostelsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
-      @hostels = policy_scope(Hostel).where(user: current_user)
-      @hostels = Hostel.all
+      @hostels = policy_scope(Hostel)
       # added this to return all hostels!
 
-      @hostels = Hostel.where.not(latitude: nil, longitude: nil)
-      @markers = @hostels.map do |hostel|
+      @marked_hostels = Hostel.where.not(latitude: nil, longitude: nil)
+      @markers = @marked_hostels.map do |hostel|
         {
         lat: hostel.latitude,
         lng: hostel.longitude
@@ -22,12 +21,14 @@ class HostelsController < ApplicationController
   end
 
   def create
+    @hostel = Hostel.new(hostel_params)
     @hostel.user = current_user
-    @hostel = Hostel.new(hostels_params)
     authorize @hostel
-    @hostel = Hostel.save
-
-    redirect_to hostel_path(@hostel)
+    if @hostel.save
+      redirect_to hostel_path(@hostel)
+    else
+      render :new
+    end
   end
 
   def show
