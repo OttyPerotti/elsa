@@ -29,12 +29,15 @@
   font-size: 16px;
   font-weight: bold;
   margin: 0;
+  font-family: 'Stylish', sans-serif;
 }
 
 .card-trip p {
   font-size: 12px;
   opacity: .7;
   margin: 0;
+  font-family: 'Stylish', sans-serif;
+
 }
 
 
@@ -51,6 +54,10 @@
   right: 16px;
   top: -20px;
   width: 40px;
+}
+
+.card-trip-infos h2 {
+  padding: 10px;
 }
 
 #map-container {
