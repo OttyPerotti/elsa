@@ -12,13 +12,9 @@
             <button type="button" class="btn btn-light"><%= link_to "Show more", hostel_path(hostel) %></button>
 
              <button type="button" class="btn btn-light"><%= link_to "Book", edit_hostel_path(hostel) %></button>
-          <div>
+
             <p><%= hostel.address %></p>
-            <h2 class="card-trip-pricing">£99.99</h2>
-          </div>
-             <button type="button" class="btn btn-light"><%= link_to "Book", new_hostel_booking_path(hostel) %></button>
-          <p><%= hostel.address %></p>
-          <h2 class="card-trip-pricing"><%= hostel.price %></h2>
+          <h2 class="card-trip-pricing">£<%= hostel.price %></h2>
         </div>
       </div>
     </div>
