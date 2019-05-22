@@ -92,9 +92,9 @@ hostel5 = Hostel.create!(
   city_name: 'Amsterdam',
   user: owner,
   price: 55,
-  photo1: "https://res.cloudinary.com/dtnezxqpe/image/upload/v1558452477/photo-1488805990569-3c9e1d76d51c_wkrmto.jpg",
-  photo2: "https://res.cloudinary.com/dtnezxqpe/image/upload/v1558452509/photo-1489171078254-c3365d6e359f_ncupzf.jpg",
-  photo3: "https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80",
+  photo1: "https://res.cloudinary.com/dtnezxqpe/image/upload/v1558536251/photo-1501183638710-841dd1904471_kmhl1s.jpg",
+  photo2: "https://res.cloudinary.com/dtnezxqpe/image/upload/v1558536321/photo-1556438758-8d49568ce18e_ydc17g.jpg",
+  photo3: "https://res.cloudinary.com/dtnezxqpe/image/upload/v1558536522/photo-1496531693211-31c5234a5ea9_yhlzic.jpg",
 )
 
 hostel6 = Hostel.create!(
@@ -103,9 +103,9 @@ hostel6 = Hostel.create!(
   city_name: 'Amsterdam',
   user: owner,
   price: 24,
-  photo1: "https://res.cloudinary.com/dtnezxqpe/image/upload/v1558452655/photo-1490732239438-ee956a60ed41_hb9sbw.jpg",
-  photo2: "https://res.cloudinary.com/dtnezxqpe/image/upload/v1558452594/photo-1488901512066-cd403111aeb2_e1vezt.jpg",
-  photo3: "https://images.unsplash.com/photo-1520014384091-f75776a1ca4f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=752&q=80",
+  photo1: "https://res.cloudinary.com/dtnezxqpe/image/upload/v1558536443/photo-1422818159909-e2fc50042acb_jacgpb.jpg",
+  photo2: "https://res.cloudinary.com/dtnezxqpe/image/upload/v1558536474/photo-1507652313519-d4e9174996dd_smjysh.jpg",
+  photo3: "https://res.cloudinary.com/dtnezxqpe/image/upload/v1558536414/photo-1553444836-bc6c8d340ba7_cif2pa.jpg",
 )
 
 hostel7 = Hostel.create!(
@@ -114,9 +114,9 @@ hostel7 = Hostel.create!(
   city_name: 'Amsterdam',
   user: owner,
   price: 30,
-  photo1: "https://res.cloudinary.com/dtnezxqpe/image/upload/v1558452715/photo-1505576391880-b3f9d713dc4f_rxpe4n.jpg",
-  photo2: "https://res.cloudinary.com/dtnezxqpe/image/upload/v1558452759/photo-1520605728164-b6a5c6814203_tz64zy.jpg",
-  photo3: "https://res.cloudinary.com/dtnezxqpe/image/upload/v1558452373/DSC_0231_l7shpy.jpg",
+  photo1: "https://res.cloudinary.com/dtnezxqpe/image/upload/v1558537216/photo-1491295005076-7840bcf778ec_rgckzz.jpg",
+  photo2: "https://images.unsplash.com/photo-1485722841820-473e4b6c3bde?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1789&q=80",
+  photo3: "https://res.cloudinary.com/dtnezxqpe/image/upload/v1558537023/hotel-bed-bedroom-room_vvdzfj.jpg",
 )
 
 
@@ -126,9 +126,9 @@ hostel8 = Hostel.create!(
   city_name: 'Lisbon',
   user: owner,
   price: 18,
-  photo1: "https://res.cloudinary.com/dtnezxqpe/image/upload/v1558453009/photo-1504042502815-3d3544395216_zlqggk.jpg",
-  photo2: "https://res.cloudinary.com/dtnezxqpe/image/upload/v1558452874/photo-1547473078-cbab237054c0_gqy58a.jpg",
-  photo3: "https://res.cloudinary.com/dtnezxqpe/image/upload/v1558453055/photo-1495754149474-e54c07932677_g14tvq.jpg",
+  photo1: "https://res.cloudinary.com/dtnezxqpe/image/upload/v1558537324/photo-1531911120215-9f628dc6e9fc_g4kklo.jpg",
+  photo2: "https://res.cloudinary.com/dtnezxqpe/image/upload/v1558537379/photo-1477120292453-1cad512c7c44_abklyg.jpg",
+  photo3: "https://res.cloudinary.com/dtnezxqpe/image/upload/v1558537437/photo-1541004995602-b3e898709909_vorsdj.jpg",
 )
 
 
