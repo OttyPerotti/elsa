@@ -3,14 +3,6 @@
 <br>
 <br>
 
-  <!-- search functionality -->
-    <%= form_tag hostels_path, method: :get do %>
-    <%= text_field_tag :query,
-    params[:query],
-    class: "form-control",%>
-    <% end %>
-  <!-- search functionality ends -->
-
 <div class="containery">
   <% @hostels.each do |hostel| %>
     <div class="card-trip">
