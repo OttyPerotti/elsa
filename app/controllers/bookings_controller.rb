@@ -12,13 +12,15 @@ class BookingsController < ApplicationController
   def create
     @booking = Booking.new(booking_params)
     @booking.user = current_user
-    @booking.hostel = Hostel.find(params[:hostel_id])
+    @hostel = Hostel.find(params[:hostel_id])
+    @booking.hostel = @hostel
     authorize @booking
     if @booking.save
-      redirect_to my_bookings_path, notice: "Booking successfully created"
+      redirect_to checkout_path, notice: "Booking successfully created"
     else
       render :new
     end
+    # raise
   end
 
   def show
@@ -56,6 +58,6 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(:booking).permit(:date, :nights, :guests)
+    params.require(:booking).permit(:start_at, :end_at, :nights, :guests)
   end
 end
