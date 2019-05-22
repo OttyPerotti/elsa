@@ -9,10 +9,12 @@
     </figure>
   </div>
   <div class="booking-widget" style="width: 400px" >
-    <%= form_for [@hostel, @booking] do |f| %>
+    <%= simple_form_for [@hostel, @booking] do |f| %>
       <%= f.text_field :nights %>
+      <%= f.input :start_at, as: :string, required: false, input_html: {class: "datepicker"} %>
+      <%= f.input :end_at, as: :string, required: false, input_html: {class: "datepicker"} %>
       <%= f.text_field :guests %>
-      <%= f.submit "Book" %>
+      <%= f.submit "Book", class: "btn btn-primary"%>
     <% end %>
   </div>
 </div>

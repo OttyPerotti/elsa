@@ -1,53 +1,7 @@
-<div class="booking-widget">
-  <div class='booking-widget__header'>
-    <figure>
-      <img src='http://www.unjourdeplusaparis.com/files/2013/07/Hotel-Keppler.gif'>
-      <figcaption class='header-caption'>
-        <h3 id="">Hotel Relais</h3>
-        <span id=""><i class="fa fa-map-marker" aria-hidden="true"></i> Paris, France</span>
-      </figcaption>
-    </figure>
-  </div>
-  <form>
-    <ul class='booking-widget__form'>
-      <li>
+
         <%= simple_form_for :search, method: "get" do |f| %>
-        <label for='check-in'>Check in</label>
-        <div id='check-in' class='form-field'>
-          <input type="text" value="" placeholder="9 July, 2016">
           <%= f.input :starts_at, as: :string, required: false, input_html: {class: "datepicker"} %>
           <%= f.input :ends_at, as: :string, required: false, input_html: {class: "datepicker"} %>
           <%= f.select :guests, (1..10).to_a %>
-          <button type="button", class="btn btn-primary"> //my button
-          <!-- <div class='datepicker'><i class="fa fa-calendar" aria-hidden="true"></i></div> -->
-        </div>
-      </li>
-      <li>
-        <label for='check-in'>Check out</label>
-        <div id='check-out' class='form-field'>
-          <input type="text" value="" placeholder="19 July, 2016">
-          <div class='datepicker'><i class="fa fa-calendar" aria-hidden="true"></i></div>
-        </div>
-      </li>
-      <li>
-        <div class='form__dropdown'>
-          <label for='adultsAmount'>Adults</label>
-          <div class='form-field'>
-            <select id='adultsAmount'>
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                        <option value="4">4</option>
-                                        <option value="5">5</option>
-                                        <option value="6">6</option>
-                                </select>
-            <div class='select-button'><i class="fa fa-caret-down" aria-hidden="true"></i></div>
-          </div>
-        </div>
-      </li>
-      <li>
-        <input type="submit" id='bookingSubmit' class='form__submit' value='Search rooms'>
-      </li>
-    </ul>
-  </form>
-</div>
+          <%= f.button :submit, "Book", class: "btn btn-primary%>
+        <% end %>
