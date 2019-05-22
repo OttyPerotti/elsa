@@ -4,7 +4,13 @@ class HostelsController < ApplicationController
   def index
       @hostels = policy_scope(Hostel)
       # added this to return all hostels!
-
+      # search method below:
+      if params[:query].present?
+        @hostels = Hostel.where("city_name ILIKE ?", "%#{params[:query]}%")
+      else
+        @hostels = Hostel.all
+      end
+      # search method above^^^
       @marked_hostels = Hostel.where.not(latitude: nil, longitude: nil)
       @markers = @marked_hostels.map do |hostel|
         {
