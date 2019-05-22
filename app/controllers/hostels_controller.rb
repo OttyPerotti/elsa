@@ -7,11 +7,9 @@ class HostelsController < ApplicationController
       # search method below:
       if params[:city].present?
         @hostels = Hostel.where("city_name ILIKE ?", "%#{params[:city]}%")
-      else
-        @hostels = Hostel.all
       end
       # search method above^^^
-      @marked_hostels = Hostel.where.not(latitude: nil, longitude: nil)
+      @marked_hostels = @hostels.where.not(latitude: nil, longitude: nil)
       @markers = @marked_hostels.map do |hostel|
         {
         lat: hostel.latitude,
