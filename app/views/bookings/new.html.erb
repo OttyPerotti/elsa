@@ -1,12 +1,15 @@
 <div class="booking-widget" style="width: 400px" >
+  <div class="booking-widget__header" style="align:center;">
+    <h3><%= @hostel.name%> Price: <%= @hostel.price  %> </h3><img src=<%=@hostel.photo1%> style="width:100%;height:100%;", class="center"></div>
   <div class="booking-widget__form">
     <%= simple_form_for [@hostel, @booking] do |f| %>
-      <div><%= f.input :nights %>
+      <div>
         <%= f.input :start_at, as: :string, required: false, input_html: {class: "datepicker"} %>
         <%= f.input :end_at, as: :string, required: false, input_html: {class: "datepicker"} %>
         <%= f.input :guests %>
         <%= f.submit "Book", class: "btn btn-primary"%></div>
     <% end %>
+  </div>
   </div>
 </div>
 
