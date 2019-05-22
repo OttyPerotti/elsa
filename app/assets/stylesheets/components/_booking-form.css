@@ -35,7 +35,7 @@ body {
 }
 
 .header-caption {
-  position: absolute;
+ /* position: absolute;*/
   bottom: 20px;
   left: 25px;
   color: white;
@@ -85,7 +85,7 @@ body {
 
 .datepicker, .select-button {
   box-sizing: border-box;
-  position: absolute;
+  /*position: absolute;*/
   top: 3px;
   right: 3px;
   width: 38px;
