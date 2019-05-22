@@ -8,13 +8,16 @@
       <img src=<%= hostel.photo1 %>>
       <div class="card-trip-infos">
         <div>
-            <h2><%= hostel.name %></h2>
-            <button type="button" class="btn btn-light"><%= link_to "Show more", hostel_path(hostel) %></button>
+            <h2 class="price-and-cashback"><%= hostel.name %></h2>
+             <button type="button" class="btn btn-light"><%= link_to "Book", new_hostel_booking_path(hostel) %></button>
 
              <button type="button" class="btn btn-light"><%= link_to "Book", edit_hostel_path(hostel) %></button>
 
-            <p><%= hostel.address %></p>
-          <h2 class="card-trip-pricing">£<%= hostel.price %></h2>
+            <p class="price-and-cashback"><%= hostel.address %></p>
+            <h2 class="price-and-cashback">£<%= hostel.price %></h2>
+            <!-- cashback below: -->
+            <p class="price-and-cashback">Cashback</p>
+            <h2 class="price-and-cashback">£<%= (hostel.price*0.05) %> / night</h2>
         </div>
       </div>
     </div>
