@@ -12,6 +12,9 @@ user-select: none;
 -webkit-user-drag: element;
 }
 
+.wrapper-dashboard {
+  position: relative;
+}
 .wrapper-dashboard body {
   font: 16px Lato, Arial;
   line-height: 2;
@@ -35,7 +38,7 @@ user-select: none;
 }
 
 .wrapper-dashboard h1, h2 {
-  font-family: 'Noto Serif', serif;
+  font-family: 'Stylish', sans-serif;
   color: #01a2a6;
   font-weight: bold;
 }
@@ -55,7 +58,7 @@ user-select: none;
 
 .wrapper-dashboard h3 {
   font-size: 30px;
-  font-family: "Lato Light", Lato, serif;
+  font-family: 'Stylish', sans-serif;
   color: #01a2a6;
   margin-top: 30px;
 
@@ -63,7 +66,7 @@ user-select: none;
 
 .wrapper-dashboard h4 {
   font-size: 18px;
-  font-family: "Lato Black", Lato, serif;
+  font-family: 'Stylish', sans-serif;
   margin: 0;
 }
 
