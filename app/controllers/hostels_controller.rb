@@ -43,14 +43,13 @@ class HostelsController < ApplicationController
     # @bookings = @hostel.bookings
     # map functionality below:
 
-    @hostel_mark = Hostel.where.not(latitude: nil, longitude: nil)
-    @marker = @hostel_mark.map do |hostel|
+    @marked_hostel = @hostel
+    @marker =
       {
-        lat: hostel.latitude,
-        lng: hostel.longitude
+        lat: @marked_hostel.latitude,
+        lng: @marked_hostel.longitude
       }
-      # added a map on the show pay
-    end
+      # added a map on the show page
   end
 
   def edit

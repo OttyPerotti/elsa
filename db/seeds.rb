@@ -42,11 +42,11 @@ owner = User.create!(
 owner.save!
 
 hostel = Hostel.create!(
-  name: "Cersei's Inn - All welcome!",
-  address: 'Dragon Lane',
-  city_name: 'Le Wagonia',
+  name: "Generator London",
+  address: '37 Tavistock Pl, Saint Pancras, London WC1H 9SE',
+  city_name: 'London',
   user: owner,
-  price: 85,
+  price: 65,
   photo1: "https://res.cloudinary.com/dtnezxqpe/image/upload/v1558452477/photo-1488805990569-3c9e1d76d51c_wkrmto.jpg",
   photo2: "https://res.cloudinary.com/dtnezxqpe/image/upload/v1558452509/photo-1489171078254-c3365d6e359f_ncupzf.jpg",
   photo3: "https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80",
@@ -86,6 +86,50 @@ hostel4 = Hostel.create!(
   photo3: "https://res.cloudinary.com/dtnezxqpe/image/upload/v1558453055/photo-1495754149474-e54c07932677_g14tvq.jpg",
 )
 
+hostel5 = Hostel.create!(
+  name: "ClinkNoord",
+  address: 'Badhuiskade 3, 1031 KV Amsterdam, Netherlands',
+  city_name: 'Amsterdam',
+  user: owner,
+  price: 55,
+  photo1: "https://res.cloudinary.com/dtnezxqpe/image/upload/v1558452477/photo-1488805990569-3c9e1d76d51c_wkrmto.jpg",
+  photo2: "https://res.cloudinary.com/dtnezxqpe/image/upload/v1558452509/photo-1489171078254-c3365d6e359f_ncupzf.jpg",
+  photo3: "https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80",
+)
+
+hostel6 = Hostel.create!(
+  name: "Flying Pig Downtown",
+  address: 'Nieuwendijk 100, 1012 MR Amsterdam, Netherlands',
+  city_name: 'Amsterdam',
+  user: owner,
+  price: 24,
+  photo1: "https://res.cloudinary.com/dtnezxqpe/image/upload/v1558452655/photo-1490732239438-ee956a60ed41_hb9sbw.jpg",
+  photo2: "https://res.cloudinary.com/dtnezxqpe/image/upload/v1558452594/photo-1488901512066-cd403111aeb2_e1vezt.jpg",
+  photo3: "https://images.unsplash.com/photo-1520014384091-f75776a1ca4f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=752&q=80",
+)
+
+hostel7 = Hostel.create!(
+  name: "Hostel Van Gogh",
+  address: 'van de Veldestraat 5, 1071 CW Amsterdam, Netherlands',
+  city_name: 'Amsterdam',
+  user: owner,
+  price: 30,
+  photo1: "https://res.cloudinary.com/dtnezxqpe/image/upload/v1558452715/photo-1505576391880-b3f9d713dc4f_rxpe4n.jpg",
+  photo2: "https://res.cloudinary.com/dtnezxqpe/image/upload/v1558452759/photo-1520605728164-b6a5c6814203_tz64zy.jpg",
+  photo3: "https://res.cloudinary.com/dtnezxqpe/image/upload/v1558452373/DSC_0231_l7shpy.jpg",
+)
+
+
+hostel8 = Hostel.create!(
+  name: "We Love F. Tourists Hostel",
+  address: 'R. dos Fanqueiros 267, 1100-230 Lisbon, Portugal',
+  city_name: 'Lisbon',
+  user: owner,
+  price: 18,
+  photo1: "https://res.cloudinary.com/dtnezxqpe/image/upload/v1558453009/photo-1504042502815-3d3544395216_zlqggk.jpg",
+  photo2: "https://res.cloudinary.com/dtnezxqpe/image/upload/v1558452874/photo-1547473078-cbab237054c0_gqy58a.jpg",
+  photo3: "https://res.cloudinary.com/dtnezxqpe/image/upload/v1558453055/photo-1495754149474-e54c07932677_g14tvq.jpg",
+)
 
 
 
