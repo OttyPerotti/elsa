@@ -53,22 +53,22 @@ hostel = Hostel.create!(
 )
 
 hostel2 = Hostel.create!(
-  name: "Hakuna Matata - Hostel",
-  address: 'The Savanah',
-  city_name: 'Le Wagonish',
+  name: "Heart of Gold Hostel",
+  address: 'Johannisstraße 11, 10117 Berlin, Germany',
+  city_name: 'Berlin',
   user: owner,
-  price: 25,
+  price: 50,
   photo1: "https://res.cloudinary.com/dtnezxqpe/image/upload/v1558452655/photo-1490732239438-ee956a60ed41_hb9sbw.jpg",
   photo2: "https://res.cloudinary.com/dtnezxqpe/image/upload/v1558452594/photo-1488901512066-cd403111aeb2_e1vezt.jpg",
   photo3: "https://images.unsplash.com/photo-1520014384091-f75776a1ca4f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=752&q=80",
 )
 
 hostel3 = Hostel.create!(
-  name: "BlaBla - Hostel",
-  address: 'Redland 15',
-  city_name: 'London',
+  name: "Generator Berlin Mitte",
+  address: 'Oranienburger Str. 65, 10117 Berlin, Germany',
+  city_name: 'Berlin',
   user: owner,
-  price: 120,
+  price: 35,
   photo1: "https://res.cloudinary.com/dtnezxqpe/image/upload/v1558452715/photo-1505576391880-b3f9d713dc4f_rxpe4n.jpg",
   photo2: "https://res.cloudinary.com/dtnezxqpe/image/upload/v1558452759/photo-1520605728164-b6a5c6814203_tz64zy.jpg",
   photo3: "https://res.cloudinary.com/dtnezxqpe/image/upload/v1558452373/DSC_0231_l7shpy.jpg",
@@ -76,15 +76,16 @@ hostel3 = Hostel.create!(
 
 
 hostel4 = Hostel.create!(
-  name: "Beds Friends - Hostel",
-  address: '108 Kinsdhsle',
+  name: "EastSeven Berlin Hostel",
+  address: 'Schwedter Str. 7, 10119 Berlin, Germany',
   city_name: 'Berlin',
   user: owner,
-  price: 99,
+  price: 40,
   photo1: "https://res.cloudinary.com/dtnezxqpe/image/upload/v1558453009/photo-1504042502815-3d3544395216_zlqggk.jpg",
   photo2: "https://res.cloudinary.com/dtnezxqpe/image/upload/v1558452874/photo-1547473078-cbab237054c0_gqy58a.jpg",
   photo3: "https://res.cloudinary.com/dtnezxqpe/image/upload/v1558453055/photo-1495754149474-e54c07932677_g14tvq.jpg",
 )
+
 
 
 
