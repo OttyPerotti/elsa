@@ -8,12 +8,13 @@ class User < ApplicationRecord
   has_many :hostels # add an if statement depending on user_type
   has_many :bookings
 
-
-
-   def last_week_bookings
-    self.hostels.map{|hostel| hostel.bookings.where({ created_at:(Time.now.midnight - 7.day)..Time.now.midnight}).count}.sum
-   end
-
+  def last_week_bookings
+    hostels.map do |hostel|
+      hostel.bookings.select do |booking|
+        DateTime.tomorrow.midnight > self.hostels.last.bookings.last.created_at && (DateTime.tomorrow.midnight - 7.day) < self.hostels.last.bookings.last.created_at
+      end
+    end.count
+  end
   # validates :user_type, presence: true
   # validates :first_name, presence: true
   # validates :last_name, presence: true

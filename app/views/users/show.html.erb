@@ -9,15 +9,15 @@
 
 <div class="container">
   <div class="cards-summaries">
-    <div class="card-style" style="background-color: #e24a65">
+    <div class="card-style2" style="background-color: #e24a65">
     <%= @user.hostels.count  %>
     Total Guests
     </div>
-    <div class="card-style" style="background-color: #e24a65">
+    <div class="card-style2" style="background-color: #e24a65">
      <%= @user.last_week_bookings %>
       Bookings This Week
     </div>
-    <div class="card-style" style="background-color: #e24a65" placeholder = "total earnings">
+    <div class="card-style2" style="background-color: #e24a65" placeholder = "total earnings">
        £<%= @earnings %>
       Total Earnings
     </div>
@@ -45,7 +45,7 @@
             <td><%= late_booking.user_id%></td>
             <td><%= late_booking.hostel_id%></td>
             <td><%= late_booking.nights %></td>
-            <td><%= late_booking.price %></td>
+            <td>£<%= late_booking.price %></td>
         </tr>
            <% end %>
           <% end %>
@@ -60,7 +60,8 @@
 <div class="top-buttons">
     <button class ="btn btn-primary btn-lg" id='show'>Payment Method</button>
 
-    <button class ="btn btn-success btn-lg">Partner Invoices</button>
+    <a href="https://ugcorigin.s-microsoft.com/100/afbbd294-f491-4f28-ae84-bbb704f48f4b/200/v2/image.jpg" class="btn btn-success btn-lg">Partner Invoices</a>
+
 
 
 </div>

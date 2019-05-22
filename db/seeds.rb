@@ -30,6 +30,8 @@ guest = User.create!(
 )
 guest.save!
 
+puts "created user as guest"
+
 owner = User.create!(
   email: 'test2@example.com',
   password: '123456',
@@ -40,6 +42,8 @@ owner = User.create!(
   age: '20'
 )
 owner.save!
+
+puts "created user as owner"
 
 hostel = Hostel.create!(
   name: "Cersei's Inn - All welcome!",
@@ -74,7 +78,6 @@ hostel3 = Hostel.create!(
   photo3: "https://res.cloudinary.com/dtnezxqpe/image/upload/v1558452373/DSC_0231_l7shpy.jpg",
 )
 
-
 hostel4 = Hostel.create!(
   name: "Beds Friends - Hostel",
   address: '108 Kinsdhsle',
@@ -86,9 +89,25 @@ hostel4 = Hostel.create!(
   photo3: "https://res.cloudinary.com/dtnezxqpe/image/upload/v1558453055/photo-1495754149474-e54c07932677_g14tvq.jpg",
 )
 
+puts "created hostel"
+
+booking = Booking.create!(
+    nights: 3,
+    user: User.last,
+    hostel: Hostel.last,
+    price: 85.0,
+    guests: 1,
+  )
 
 
-
+booking1 = Booking.create!(
+    nights: 3,
+    user: User.last,
+    hostel: Hostel.first,
+    price: 85.0,
+    guests: 1,
+  )
+puts "created booking"
 
 
 

@@ -6,8 +6,8 @@ class Booking < ApplicationRecord
   # that handles time frame of the booking with start and end date
   # revisit with MVP 2
   validates :nights, presence: true, numericality: { only_integer: true }
-  validates :user_id, uniqueness: true, presence: true
-  validates :hostel_id, uniqueness: true, presence: true
+  validates :user_id, presence: true
+  validates :hostel_id, presence: true
   # validates :room_id, uniqueness: true, presence: true // this is being commented
   # out as MPV 1 while not have rooms db as per TA's advice
 

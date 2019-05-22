@@ -11,6 +11,11 @@ class UsersController < ApplicationController
 
   def my_bookings
     @bookings = Booking.where(user: current_user)
+    @last_week = current_user.hostels.map do |hostel|
+      hostel.bookings
+    end.select do |booking|
+      DateTime.tomorrow.midnight > current_user.hostels.last.bookings.last.created_at && (DateTime.tomorrow.midnight - 7.day) < current_user.hostels.last.bookings.last.created_at
+    end.count
   end
 
   private
