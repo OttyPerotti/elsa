@@ -30,7 +30,7 @@
   </div>
 
   <div id="centerbuttons">
-    <button type="button" class="btn btn-info"><%= link_to "Book Now", new_booking_path %></button>
+    <button type="button" class="btn btn-info"><%= link_to "Book Now", new_hostel_booking_path(@hostel) %></button>
     <button type="button" class="btn btn-info"><%= link_to "Back", hostels_path %></button>
     <button type="button" class="btn btn-info"><%= link_to "Home", root_path %></button>
   </div>
@@ -43,6 +43,6 @@
     style="width: 100%;
     height: 600px;"
     data-markers="<%= @markers.to_json %>"
-    data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+    data-mapbox-api-key="<%= ENV['pk.eyJ1Ijoicm95ZGVuY29vcGVyIiwiYSI6ImNqdmRtNDF5MDF0bHI0NnBmNzRrdzRqMDAifQ.7ypbzmgn3ndMbIAVDzGGiQ'] %>"
   ></div>
 </div>

@@ -15,6 +15,10 @@ User.all.each do |user|
   user.destroy
 end
 
+Booking.all.each do |user|
+  booking.destroy
+end
+
 guest = User.create!(
   email: 'test@example.com',
   password: '123456',
@@ -38,7 +42,7 @@ owner = User.create!(
 owner.save!
 
 hostel = Hostel.create!(
-  name: "Cresei's Inn - All welcome!",
+  name: "Cersei's Inn - All welcome!",
   address: 'Dragon Lane',
   city_name: 'Le Wagonia',
   user: owner,
@@ -81,6 +85,7 @@ hostel4 = Hostel.create!(
   photo2: "https://res.cloudinary.com/dtnezxqpe/image/upload/v1558452874/photo-1547473078-cbab237054c0_gqy58a.jpg",
   photo3: "https://res.cloudinary.com/dtnezxqpe/image/upload/v1558453055/photo-1495754149474-e54c07932677_g14tvq.jpg",
 )
+
 
 
 
