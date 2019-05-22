@@ -1,4 +1,7 @@
 <h1>HELLO</h1>
 <% @bookings.each do |b| %>
   <h3><%= b.hostel.name %></h3>
+  <h3><%= b.start_at %></h3>
+  <h3><%= b.end_at %></h3>
+  <h3>$<%= b.hostel.price %></h3>
 <% end %>

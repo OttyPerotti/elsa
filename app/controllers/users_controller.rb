@@ -13,6 +13,11 @@ class UsersController < ApplicationController
     @bookings = Booking.where(user: current_user)
   end
 
+  # def checkout
+  #   @bookings = Booking.where(user: current_user)
+  #   authorize @booking
+  # end
+
   private
 
   def check_authorization
