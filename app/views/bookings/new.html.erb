@@ -1,20 +1,11 @@
-<div class="booking-widget">
-  <div class='booking-widget__header'>
-    <figure>
-      <img src='url of the photo associated with the hostel'>
-      <figcaption class='header-caption'>
-        <h3><%= @hostel.name %><%= @hostel.name %> <%= @hostel.price %> /per person /night</h3>
-        <span id=""><i class="fa fa-map-marker" aria-hidden="true"></i><%= @hostel.address %></span>
-      </figcaption>
-    </figure>
-  </div>
-  <div class="booking-widget" style="width: 400px" >
+<div class="booking-widget" style="width: 400px" >
+  <div class="booking-widget__form">
     <%= simple_form_for [@hostel, @booking] do |f| %>
-      <%= f.input :nights %>
-      <%= f.input :start_at, as: :string, required: false, input_html: {class: "datepicker"} %>
-      <%= f.input :end_at, as: :string, required: false, input_html: {class: "datepicker"} %>
-      <%= f.input :guests %>
-      <%= f.submit "Book", class: "btn btn-primary"%>
+      <div><%= f.input :nights %>
+        <%= f.input :start_at, as: :string, required: false, input_html: {class: "datepicker"} %>
+        <%= f.input :end_at, as: :string, required: false, input_html: {class: "datepicker"} %>
+        <%= f.input :guests %>
+        <%= f.submit "Book", class: "btn btn-primary"%></div>
     <% end %>
   </div>
 </div>

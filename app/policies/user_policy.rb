@@ -12,4 +12,8 @@ class UserPolicy < ApplicationPolicy
   def my_bookings?
     true
   end
+
+  def checkout?
+    true
+  end
 end

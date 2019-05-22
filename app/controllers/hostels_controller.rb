@@ -34,7 +34,6 @@ class HostelsController < ApplicationController
   def show
     set_hostel
     authorize @hostel
-
     @hostel = Hostel.find(params[:id])
     # @bookings = @hostel.bookings
     # map functionality below:

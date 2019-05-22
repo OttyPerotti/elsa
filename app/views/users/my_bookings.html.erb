@@ -1,7 +1,15 @@
-<h1>HELLO</h1>
-<% @bookings.each do |b| %>
-  <h3><%= b.hostel.name %></h3>
-  <h3><%= b.start_at %></h3>
-  <h3><%= b.end_at %></h3>
-  <h3>$<%= b.hostel.price %></h3>
-<% end %>
+
+  <% @bookings.each do |b| %>
+<div class="card-product">
+  <img src=<%= b.hostel.photo1 %> >
+  <div class="card-product-infos">
+    <h2><%= b.hostel.name %></h2>
+    <p>Booked for 3 nights: <%= b.start_at %> <%= b.end_at %> </p>
+    <p> $<%= b.hostel.price %> <strong>per night</strong> </p>
+  </div>
+   <br>
+  <br>
+  <br>
+</div>
+  <% end %>
+
