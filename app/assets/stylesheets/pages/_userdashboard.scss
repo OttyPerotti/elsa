@@ -1,0 +1,854 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif');
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+[draggable] {
+-moz-user-select: none;
+-khtml-user-select: none;
+-webkit-user-select: none;
+user-select: none;
+/* Required to make elements draggable in old WebKit */
+-khtml-user-drag: element;
+-webkit-user-drag: element;
+}
+
+.wrapper-dashboard body {
+  font: 16px Lato, Arial;
+  line-height: 2;
+  width: 100%;
+  height: 100%;
+  color: #777777;
+  background: #ffffff;
+}
+
+@media screen and (max-width: 768px) {
+  body {font-size: 14px;}
+}
+
+
+.wrapper-dashboard p {
+    display: block;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}
+
+.wrapper-dashboard h1, h2 {
+  font-family: 'Noto Serif', serif;
+  color: #01a2a6;
+  font-weight: bold;
+}
+
+.wrapper-dashboard h1 {
+  font-size: 5.8vw;
+  text-transform: uppercase;
+  margin-top: 0px;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.wrapper-dashboard h2 {
+  font-size: 4vw;
+  margin-bottom: 55px;
+}
+
+.wrapper-dashboard h3 {
+  font-size: 30px;
+  font-family: "Lato Light", Lato, serif;
+  color: #01a2a6;
+  margin-top: 30px;
+
+}
+
+.wrapper-dashboard h4 {
+  font-size: 18px;
+  font-family: "Lato Black", Lato, serif;
+  margin: 0;
+}
+
+.wrapper-dashboard h5 {
+  font-size: 24px;
+  font-family: "Lato Light", Lato, serif;
+  color: #626262;
+  margin: 0 0 10px;
+}
+
+@media screen and (max-width: 768px) {
+  h2 { font-size: 30px;}
+  h3 { font-size: 20px;}
+}
+
+.wrapper-dashboard .white {
+  color: #fff;
+}
+
+.blue {
+  color: #29d9c2;
+  text-align: center !important;
+  font-family: 'Stylish', sans-serif;
+}
+
+.wrapper-dashboard button, .contact .contact-submit input{
+  border: none;
+  border-radius: 30px;
+  padding: 15px;
+  -webkit-transition: background 0.5s, color 0.5s;
+  transition: background 0.5s, color 0.5s;
+}
+
+.wrapper-dashboard a, .navbar-default .navbar-header a, .navbar-default .navbar-nav .menu-item a {
+  font-size: 1.3vw;
+  color: #fff;
+  box-sizing: border-box;
+  border: solid 2px transparent;
+  border-radius: 30px;
+  margin: 0px 15px;
+  -webkit-transition: border 0.5s, color 0.5s;
+  transition: border 0.5s, color 0.5s;
+}
+
+@media screen and (max-width: 767px) {
+  a, .navbar-default .navbar-header a, .navbar-default .navbar-nav .menu-item a {font-size: 12px;}
+  .navbar-collapse {background: rgba(1, 162, 166, 0.8);}
+}
+
+.wrapper-dashboard .navbar-default .navbar-nav > .active > a {
+  background: none;
+  border: solid 2px;
+  border-radius: 30px;
+}
+
+.wrapper-dashboard a:hover {text-decoration: none; color: #29d9c2;}
+
+.wrapper-dashboard .navbar-default .navbar-nav > .menu-item > a:hover {
+  border: solid 2px;
+  border-radius: 30px;
+  color: #fff;
+  background: transparent;
+}
+
+.wrapper-dashboard #header .navbar-default {
+  top: 35px;
+  width: 100%;
+  position: absolute;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  z-index: 50;
+}
+
+.wrapper-dashboard .container .navbar-header .navbar-brand {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+}
+
+.container .navbar-header .navbar-brand:hover,.container .navbar-header .navbar-brand:focus {color:#fff;}
+
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #fff;
+}
+
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+  background-color: rgba(41, 217, 194, 0.6);
+}
+
+.home-baner {
+  padding-top: 220px;
+  font-size: 18px;
+  color: #fff;
+  text-align: center;
+}
+
+.baner-content button {
+  margin-top: 40px;
+  background: #ffffa6;
+  text-transform: uppercase;
+  font-size: 16px;
+  color: #10273d;
+}
+
+.baner-content button:hover {
+  background: #ffff93;
+  color: #01a2a6;
+}
+@media screen and (max-width: 767px) {
+  .home-baner {font-size: 14px;}
+  .baner-content button {font-size: 11px;}
+}
+
+.white-container {
+  height: 490px;
+  padding-top: 100px;
+  margin-top: -40px;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+@media screen and (max-width: 992px) {
+  .white-container img {width: 350px;}
+}
+
+@media screen and (max-width: 768px) {
+  .white-container div {text-align: center;
+    margin-bottom: 30px;
+  }
+  .white-container { margin-bottom: 120px;}
+}
+
+@media screen and (max-width: 480px) {
+  .white-container img {width: 200px;}
+  .white-container {padding-top: 60px;}
+}
+
+.blue-back {
+  background: #f2fefe;
+}
+
+.row {
+  margin-top: 60px;
+}
+
+.info {
+  margin: 20px 0;
+  color: #aeaeae;
+}
+@media screen and (max-width: 768px) {
+  .info {font-size: 10px;}
+  .info img {width: 25px;}
+}
+
+@media screen and (max-width: 480px) {
+  .info {font-size: 7px;}
+  .info img {width: 15px;}
+}
+
+.search-form {
+  width: 235px;
+  border: #f4f4f4 solid 1px;
+  border-radius: 30px;
+  background: #fff url(http://res.cloudinary.com/alpis/image/upload/v1496851135/serch_dxtjlg.png) 5% center no-repeat;
+  -webkit-transition: border 0.5s;
+  transition: border 0.5s;
+}
+
+.search-form:hover, .search-form:focus {
+  border: #01a2a6 solid 1px;
+}
+
+.search-form input{
+  padding:0;
+  margin:0;
+  margin-left: 15%;
+  display:block;
+  border:none;
+  outline:none;
+  background:none;
+}
+
+.search::placeholder {
+  font-size: 14px;
+  font-style: italic;
+  color: #b5b5b5;
+}
+
+.place {background: none;}
+
+.place .place-item a, .breadcrumb>li+li:before {
+  font-size: 16px;
+  color: #777777;
+  font-family: "Lato Black";
+  text-transform: uppercase;
+}
+
+.place .place-item {
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 768px) {
+  .place .place-item a, .breadcrumb>li+li:before, .place .place-item {font-size: 8px;}
+}
+
+article .row {
+  margin-top: 0px;
+}
+
+.city {
+  background: url(http://res.cloudinary.com/alpis/image/upload/v1496920423/city_ga8xw6.png) no-repeat ;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+  background-size: cover;
+  height: 515px;
+  padding: 0px;
+  margin-bottom: 30px;
+}
+
+.city-description {
+  width: 41.5%;
+  height: 515px;
+  margin: 0px;
+  padding: 50px;
+  float: right;
+  background: url(http://res.cloudinary.com/alpis/image/upload/v1496923620/C-_Users_User_Desktop_city-descr_yp6xcb.png) no-repeat;
+}
+
+.city p {
+  font-weight: bold;
+}
+.city a, .mount a, .gallery a {
+  display: inline-block;
+  border: none;
+  background: rgba(0,0,0,0.2);
+  -webkit-box-shadow: 0px 0px 10px 11px rgba(0,0,0,0.2);
+  -moz-box-shadow: 0px 0px 10px 11px rgba(0,0,0,0.2);
+  box-shadow: 0px 0px 10px 11px rgba(0,0,0,0.2);
+}
+
+.city a {
+  margin-left: 47%;
+  margin-top: 465px;
+}
+
+@media screen and (max-width: 992px) {
+  .city-description, .city {height: 450px;}
+  .city a { margin-top: 415px;}
+  .icon img { width: 60px;}
+  .city p { font-size: 12px;}
+}
+
+@media screen and (max-width: 768px) {
+  .icon img { width: 40px;}
+  .city-description { width: 70%;}
+  .city a {margin-left: 5%;}
+}
+
+@media screen and (max-width: 480px) {
+  .city p { font-size: 10px;}
+}
+
+.mount {
+  background: url(http://res.cloudinary.com/alpis/image/upload/v1497009880/bromo_tecoqq.png) no-repeat ;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+  background-size: cover;
+  height: 360px;
+  padding: 0px;
+}
+
+.mount-description {
+  float:left;
+  background: url(http://res.cloudinary.com/alpis/image/upload/v1497014365/mount-descr_igwchu.png) no-repeat right;
+  width: 50%;
+  height: 360px;
+  padding: 40px;
+}
+
+.mount a {
+  float: right;
+  margin-top: 315px;
+}
+
+.gallery {
+  background: url(http://res.cloudinary.com/alpis/image/upload/v1497016705/gallery_tknqjd.png) no-repeat;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+  background-size: cover;
+  float: right;
+  width: 40%;
+  height: 360px;
+  padding: 0px;
+}
+
+.gallery .icon {
+  width: 155px;
+  height: 155px;
+  margin: 102.5px auto 0 auto;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.93);
+  line-height: 155px;
+  border-radius: 50%;
+}
+.gallery .icon img {
+  vertical-align: middle;
+}
+
+.gallery a {
+  float: right;
+  margin-top: 58px;
+}
+
+@media screen and (max-width: 1200px) {
+  .mount p {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .mount p { font-size: 12px; }
+  .gallery .icon {
+    width: 120px;
+    height:120px;
+    line-height: 120px;
+  }
+  .gallery a { margin-top: 92px;}
+}
+
+@media screen and (max-width: 768px){
+  .mount-description { width: 45%;}
+  .gallery {width: 100%;}
+}
+
+@media screen and (max-width: 480px) {
+  .mount-description { width: 60%; font-size: 10px;}
+
+}
+
+.pages {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.pages .pagination li > a {
+  border: none;
+  background: none;
+  margin: 0;
+  font-family: 'Noto Serif', serif;
+  color: #acacac;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.pages .pagination .active > a {
+  font-size: 24px;
+  color: #01a2a6;
+  border: none;
+  background: none;
+}
+
+@media screen and (max-width:992px) {
+  .pages .pagination li > a { font-size: 14px; line-height: 18px;}
+  .pages .pagination .active > a {font-size: 18px;}
+}
+
+.headding {
+  text-align: center;
+}
+
+.itinerary-form {
+  height: 815px;
+  overflow-y: auto;
+  background: #ffffa6;
+  padding: 0;
+  border-radius: 5px;
+}
+
+.itinerary-form-title {
+  background: url(http://res.cloudinary.com/alpis/image/upload/v1497356506/form_head_szb6c3.png) no-repeat center center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+  background-size: cover;
+  margin: 0;
+  height: 75px;
+  border-top-left-radius:inherit;
+  border-top-right-radius:inherit;
+  color:#fff;
+  text-align: center;
+}
+.itinerary-form-title h4 {
+  line-height: 75px;
+}
+
+.itinerary-date, .day, .sort-destination, .destinations-list-search{
+  display: inline-block;
+  margin: 30px 40px 10px;
+  font-family: 'Lato Heavy', Lato, serif;
+  color: #01a2a6;
+}
+
+.itinerary-date, .destinations-list-search {
+  float: right;
+}
+
+.itinerary-date input{
+  background: none;
+  border: none;
+  border-color:none;
+  width: 95px;
+}
+
+.itinerary-destination, .destination-item { margin-bottom: 15px;}
+
+
+.itinerary-item, .destination-item  {
+  background: #fff;
+  border-radius: 5px;
+}
+
+.itinerary-item {
+  border: #d8cb7d solid 1px;
+  margin: 0 40px;
+  padding: 17px 20px;
+}
+
+.itinerary-item .itinerary-item-img, .itinerary-item .itinerary-item-name, .itinerary-item .itinerary-item-time {
+  display: inline-block;
+  line-height: 50px;
+}
+
+.itinerary-item-img {
+  width: 60px;
+  height: 50px;
+  margin-right: 20px;
+}
+
+.itinerary-item-img img {
+  max-width: 60px;
+  max-height: 50px;
+
+}
+
+.itinerary-item-time {
+  float: right;
+}
+
+.itinerary-item-time input {
+  border: none;
+}
+
+.itinerary-item-time input::placeholder {
+  font-family: 'Lato Light', Lato, serif;
+  font-size: 18px;
+  color: #a8a8a8 ;
+}
+
+.itinerary-sub-destination {
+  margin: 0px 50px;
+  border-radius: 0px;
+  border-bottom-left-radius: 5px;
+  background-color: rgb(245, 233, 158);
+  font-weight: bold;
+  color: #aea25c;
+}
+
+.itinerary-sub-destination .sub-destination p {
+  margin: 0;
+  padding: 10px 20px;
+}
+
+.itinerary-sub-destination hr {
+  margin: 0px 15px;
+  border-color: rgba(174, 162, 92, 0.7);
+}
+
+.add-sub-destination button{
+  float: right;
+  margin: 0 50px;
+  padding: 5px 15px;
+  color: #d8cb7d;
+  font-family: 'Lato Heavy', Lato, serif;
+  background-color: rgb(245, 233, 158);
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-top-right-radius: 0px;
+  border-top-left-radius: 0px;
+}
+
+.drag-place {
+  padding: 8px 0;
+  margin: 0 40px;
+  background: rgba(216, 203, 125, 0.3);
+  border: #d8cb7d dashed;
+  border-radius: 5px;
+  text-align: center;
+  font-family: 'Lato Heavy', Lato, serif;
+  color: #d8cb7d;
+}
+
+.form-buttons {
+  text-align: right;
+  margin: 20px 0;
+}
+
+.form-buttons button {
+  font-family: 'Lato Heavy', Lato, serif;
+  text-transform: uppercase;
+  margin-left: 25px;
+}
+.form-buttons button img {
+  margin-right: 15px;
+}
+
+.save {background: #c3f37f;}
+.print {background: #3ddbc7;}
+
+.form-buttons button a:hover {color:#fff;}
+.form-buttons .save:hover { background: #bbe87b;}
+.form-buttons .print:hover {background: #3accb9;}
+
+.destinations-list-title {
+  margin: 0;
+  height: 75px;
+  line-height: 75px;
+  text-align: center;
+  color: #29d9c2;
+}
+
+.destinations-list-title h4 {
+  line-height: 75px;
+}
+
+.destinations-list-title hr {
+  width: 70px;
+  height: 2px;
+  margin-top: -10px;
+  border-radius: 20%;
+  background: rgba(61, 219, 199, 0.9);
+}
+
+.sort-destination, .destinations-list-search {margin:30px 0 10px;}
+
+select {
+  border: none;
+  font-family: Lato Medium , Lato, serif;
+  color: #bcbcbc;
+}
+
+.destinations-list-search .search-form {
+  font: 16px Lato, Arial;
+  width: 30px;
+  overflow: hidden;
+  padding-left: 30px;
+  border: none;
+  -webkit-transition: border 0.5s, width 0.5s, padding-left 0.5s, border 0.5s;
+  transition: border 0.5s, width 0.5s, padding-left 0.5s, border 0.5s;
+}
+
+.destinations-list-search .search-form:hover, .destinations-list-search .search-form:focus, .destinations-list-search .search-form:active {
+  width: 160px;
+  padding-left: 10px;
+  border: #01a2a6 solid 1px;
+}
+
+.destination-item {
+  padding: 10px 20px;
+  border: #e8e8e8 solid 1px;
+  -webkit-box-shadow: 1px 1px 1px 1px rgba(232,232,232,0.6);
+  -moz-box-shadow: 1px 1px 1px 1px rgba(232,232,232,0.6);
+  box-shadow: 1px 1px 1px 1px rgba(232,232,232,0.6);
+  cursor: move;
+}
+
+.destination-item-name, .destination-item-details {
+  display: inline-block;
+}
+
+.destination-item .destination-item-name p {
+  margin: 0;
+  font-size: 14px;
+  font-family: "Lato Light", Lato, serif;
+  color: #b9b9b9;
+}
+
+.destination-item .destination-item-name p span { color:#23c6b6; }
+
+.destination-item-details { float: right; text-align: right;}
+
+.destination-item-details img {
+  width: 60px;
+  margin: 0 auto 7px;
+}
+
+.destination-item-details a p {
+  margin: 0;
+  color:#23c6b6;
+  font-size: 14px;
+  font-family: "Lato Semibold", Lato, serif;
+}
+
+.contact {
+  background: url(http://res.cloudinary.com/alpis/image/upload/v1497535997/contact_ffr2gy.png) no-repeat center center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+  background-size: cover;
+  padding: 75px 0;
+  margin-top: 75px;
+}
+.contact h2 {
+  text-align: center;
+  margin: 10px 0;
+}
+
+.contact input, .contact textarea, .subscribe{
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 20px 25px;
+  font-family: "Lato Medium", Lato, serif;
+  color: #b9b9b9;
+  font-style: italic;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(199, 199, 199);
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.17);
+}
+
+.contact-company, .contact-subject {
+  display: inline-block;
+  width: 49%;
+}
+
+.contact-subject {float: right;}
+
+.contact-submit {text-align: right;}
+
+.contact .contact-submit input {
+  width: auto;
+  font-family: 'Lato Heavy', Lato, serif;
+  font-size: 15px;
+  font-style: normal;
+  text-transform: uppercase;
+  color: #fff;
+  background: #c3f37f;
+  border: none;
+  box-shadow: none;
+}
+
+.contact .contact-submit input:hover {
+  background: #bbe87b;
+}
+
+.contact .col-md-2 {
+  margin-top: 10%;
+  text-align: center;
+}
+
+.contact .col-md-2 p {
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 14px;
+}
+
+.contact-title p{
+  font-family: 'Lato Light', Lato, serif;
+  font-size: 3vw;
+  text-transform: capitalize;
+  color: #fff;
+  margin-top: 0;
+  line-height: 1;
+}
+
+.address p, .keep p {
+  font-size: 12px;
+  color: #fff;
+  margin:0;
+}
+
+.address p img {padding: 0 5px 5px;}
+
+.address a{
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #fff772;
+  margin: 0 22px;
+  padding: 0;
+}
+
+.address a:hover {color: #e5de65;}
+
+@media screen and (max-width: 768px) {
+  .contact .contact-submit input {
+    font-size: 10px;
+  }
+  .contact-title p {font-size: 22px; tex-align: center;}
+}
+
+.keep {
+  background-color: linear-gradient ;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+  background-size: cover;
+}
+
+.keep h2 {margin: 0 0 10px;}
+
+.subscribe input {
+  border: none;
+  background-color: transparent;
+  box-shadow: none;
+  padding: 20px 25px;
+}
+.subscribe {
+  width: 70%;
+  background: #fff;
+  font-family: Lato, serif;
+  padding: 0;
+}
+
+.keep .row {
+  margin-top: 45px;
+  margin-bottom: 45px;
+}
+
+.subscribe input::placeholder {color: #c7c7c7; font-size: 16px;}
+
+.subscribe .subscribe-btn {
+  width: 20%;
+  background: #01a2a6  url(http://res.cloudinary.com/alpis/image/upload/v1497604485/subscribe_wpcblq.png) center center no-repeat;
+  float: right;
+  border-top-right-radius: inherit;
+  border-bottom-right-radius: inherit;
+}
+
+@media screen and (max-width:992px) {
+  .subscribe {width: 100%;}
+  .keep .row {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}}
+
+footer {
+  background: url(http://res.cloudinary.com/alpis/image/upload/v1497611982/footer_ifsl5p.png) no-repeat center center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+  background-size: cover;
+}
+
+footer .row {
+  margin-top: 20px;
+}
+
+.footer-left a, .footer-left p {
+  font-size: 12px;
+  color: #5d5c5c;
+  margin: 0 5px;
+}
+
+.footer-center .copy {
+  text-align: center;
+  font-size: 12px;
+  color: #aeaeae;
+  margin-top: 60%;
+}
+
+.socials {text-align: right;}
+
+.socials a {
+  margin: 0 5px;
+}
+
+@media screen and (max-width:992px) {
+  .footer-left a, .footer-left p { font-size: 10px;}
+}
+
+@media screen and (max-width: 768px) {
+  .footer-left, .socials {text-align: center;}
+  .footer-center .copy {margin: 10px 0;}
+}

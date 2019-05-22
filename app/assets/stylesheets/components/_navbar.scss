@@ -1,6 +1,15 @@
+.transparent {
+  opacity: 0.3 !important;
+}
+
+#navbar {
+  position: sticky;
+  top: 0;
+}
+
 .navbar {
   padding-left:0px !important;
-  margin-left: 0px;;
+  margin-left: 0px;
 }
 
 .containery {

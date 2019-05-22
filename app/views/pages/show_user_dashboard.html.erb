@@ -1,1 +1,140 @@
-show_user_dashboard.html.erb
+<div class="wraper-dashboard">
+  <header id="header">
+    <nav class="navbar navbar-default" role="navigation">
+      <div class="dashboard-container">
+        <!-- Collect the nav links, forms, and other content for toggling -->
+      </div><!-- /.container -->
+    </nav>
+        <div class="flexbox">
+          <h2 class="blue">Set Itinerary</h2>
+        </div>
+    </div><!--headding-->
+    <div class="row itinerary">
+      <div class="col-lg-7 col-md-7 left">
+        <div class="itinerary-form">
+          <div class=itinerary-form-title>
+            <h4>Your Itinerary Title Here</h4>
+          </div>
+          <form action="">
+            <div class="day">Day 1</div>
+            <div class="itinerary-date"><label><input id="datetimepicker" type="text" > &#9660; </label></div>
+            <div class="itinerary-destination clearfix">
+              <div class="itinerary-item">
+                <div class="itinerary-item-img"><img src="http://res.cloudinary.com/alpis/image/upload/v1497011648/mount_drf98h.png"></div>
+                <div class="itinerary-item-name"><h5>Mt. Bromo</h5></div>
+                <div class="itinerary-item-time"><input type="text" size="13" maxlength="11" placeholder="03:30 - 09:00"></div>
+                </div><!--itinerary-item-->
+              <div class="itinerary-sub-destination">
+
+              </div>
+              <div class="add-sub-destination"><button>add sub destination <img src="http://res.cloudinary.com/alpis/image/upload/v1497518176/add_nznner.png"></button></div>
+            </div><!--/itinerary-destination-->
+            <div class="itinerary-destination clearfix">
+              <div class="itinerary-item">
+                <div class="itinerary-item-img"><img src="http://res.cloudinary.com/alpis/image/upload/v1496922344/batu_pxfj9h.png"></div>
+                <div class="itinerary-item-name"><h5>Batu City</h5></div>
+                <div class="itinerary-item-time"><input type="text" size="13" maxlength="11" placeholder="10:00 - 15:00"></div>
+                </div><!--itinerary-item-->
+              <div class="itinerary-sub-destination">
+                <div class="sub-destination"><p>Enjoy Malang while Listening Music</p></div>
+                <hr>
+                <div class="sub-destination"><p>Gonna Eat BAKSO</p></div>
+              </div><!--/itinerary-sub-destination-->
+              <div class="add-sub-destination"><button>add sub destination <img src="http://res.cloudinary.com/alpis/image/upload/v1497518176/add_nznner.png"></button></div>
+            </div><!--/itinerary-destination-->
+            <div class="day">Day 2</div>
+            <div class="itinerary-date"><label><input id="datetimepicker1" type="text" > &#9660;  </label></div>
+            <div class="drag-place">
+              <p>Drag Destination Here</p>
+            </div>
+          </form>
+        </div><!--/itinerary-form-->
+        <div class="form-buttons">
+          <button class="save"><a href="#"><img src="http://res.cloudinary.com/alpis/image/upload/v1497428572/book_qtdg7a.png"> save as pdf</a></button>
+          <button class="print"><a href="#"><img src="http://res.cloudinary.com/alpis/image/upload/v1497428777/print_amllks.png"> print</a></button>
+        </div>
+      </div><!--/left-->
+      <div class="col-lg-5 col-md-5 right">
+        <div class="destinations-list">
+          <div class="destinations-list-title">
+            <h4>List of Destination</h4>
+            <hr>
+          </div>
+          <div class="sort-destination">sort by: <select>
+            <option>Mountain</option>
+            <option>City</option>
+            </select>
+          </div><!--/sort-destination-->
+          <div class="destinations-list-search">
+            <form action="#" class="search-form">
+            <input type="search" class="search" placeholder="search destination">
+          </form>
+          </div><!--/destinations-list-search-->
+          <div id="columns">
+            <div class="destination-item" draggable="true">
+              <div class="destination-item-name">
+                <h5>Mt. Bromo</h5>
+                <p>estimated time:<span> <b>5</b> Hours</span></p>
+              </div>
+              <div class="destination-item-details">
+                <a href="#"><img src="http://res.cloudinary.com/alpis/image/upload/v1497011648/mount_drf98h.png"><p>view details</p></a>
+              </div>
+            </div><!--/destination-item-->
+            <div class="destination-item" draggable="true">
+              <div class="destination-item-name">
+                <h5>Mt. Panderman</h5>
+                <p>estimated time:<span> <b>5</b> Hours</span></p>
+              </div>
+              <div class="destination-item-details">
+                <a href="#"><img src="http://res.cloudinary.com/alpis/image/upload/v1497011648/mount_drf98h.png"><p>view details</p></a>
+              </div>
+            </div><!--/destination-item-->
+            <div class="destination-item" draggable="true">
+              <div class="destination-item-name">
+                <h5>Mt. Semeru</h5>
+                <p>estimated time:<span> <b>5</b> Hours</span></p>
+              </div>
+              <div class="destination-item-details">
+                <a href="#"><img src="http://res.cloudinary.com/alpis/image/upload/v1497011648/mount_drf98h.png"><p>view details</p></a>
+              </div>
+            </div><!--/destination-item-->
+            <div class="destination-item" draggable="true">
+              <div class="destination-item-name">
+                <h5>Mt. Bromo</h5>
+                <p>estimated time:<span> <b>5</b> Hours</span></p>
+              </div>
+              <div class="destination-item-details">
+                <a href="#"><img src="http://res.cloudinary.com/alpis/image/upload/v1497011648/mount_drf98h.png"><p>view details</p></a>
+              </div>
+            </div><!--/destination-item-->
+            <div class="destination-item" draggable="true">
+              <div class="destination-item-name">
+                <h5>Mt. Bromo</h5>
+                <p>estimated time:<span> <b>5</b> Hours</span></p>
+              </div>
+              <div class="destination-item-details">
+                <a href="#"><img src="http://res.cloudinary.com/alpis/image/upload/v1497011648/mount_drf98h.png"><p>view details</p></a>
+              </div>
+            </div><!--/destination-item-->
+          </div>
+        </div><!--/destinations-list-->
+      </div>
+    </div>
+  </div><!--/container-->
+  <div class="keep">
+    <div class="container hidden-xs">
+      <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-6">
+          <h2 class="white">Keep in Touch</h2>
+          <p>We Will Give you latest information about Malang</p>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6">
+          <form class="subscribe">
+            <input type="email" style="width:80%;" placeholder="Type Email Here for Subscribe">
+            <input type="submit" value="" class="subscribe-btn">
+          </form>
+        </div>
+      </div><!--row-->
+    </div><!--/container-->
+  </div><!--/keep-->x
+</div><!--/wraper-->
