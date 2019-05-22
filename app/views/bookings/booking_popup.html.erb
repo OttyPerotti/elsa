@@ -5,3 +5,13 @@
           <%= f.select :guests, (1..10).to_a %>
           <%= f.button :submit, "Book", class: "btn btn-primary%>
         <% end %>
+
+  <div class="booking-widget" style="width: 400px" >
+    <%= simple_form_for [@hostel, @booking] do |f| %>
+      <%= f.text_field :nights %>
+      <%= f.input :start_at, as: :string, required: false, input_html: {class: "datepicker"} %>
+      <%= f.input :end_at, as: :string, required: false, input_html: {class: "datepicker"} %>
+      <%= f.text_field :guests %>
+      <%= f.submit "Book", class: "btn btn-primary"%>
+    <% end %>
+  </div>
