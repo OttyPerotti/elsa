@@ -5,8 +5,8 @@ class HostelsController < ApplicationController
       @hostels = policy_scope(Hostel)
       # added this to return all hostels!
       # search method below:
-      if params[:query].present?
-        @hostels = Hostel.where("city_name ILIKE ?", "%#{params[:query]}%")
+      if params[:city].present?
+        @hostels = Hostel.where("city_name ILIKE ?", "%#{params[:city]}%")
       else
         @hostels = Hostel.all
       end
