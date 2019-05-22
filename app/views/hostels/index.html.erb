@@ -1,6 +1,7 @@
 <h1 class="header">Hostels</h1>
 
-<button type="button" class="btn btn-light"><%= link_to "Create", new_hostel_path %></button>
+<br>
+<br>
 
 <div class="containery">
   <% @hostels.each do |hostel| %>
@@ -9,7 +10,7 @@
       <div class="card-trip-infos">
         <div>
             <h2 class="price-and-cashback"><%= hostel.name %></h2>
-             <button type="button" class="btn btn-light"><%= link_to "Book", new_hostel_booking_path(hostel) %></button>
+             <button type="button" class="btn btn-light"><%= link_to "Show More", hostel_path(hostel) %></button>
 
              <button type="button" class="btn btn-light"><%= link_to "Book", new_hostel_booking_path(hostel) %></button>
 

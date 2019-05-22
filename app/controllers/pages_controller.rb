@@ -6,6 +6,9 @@ class PagesController < ApplicationController
     # @hostels = Hostel.all
   end
 
+  def show_user_dashboard
+  end
+
   private
 
   def payment_method_params
